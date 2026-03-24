@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Sparkles, AlertCircle, RefreshCw } from "lucide-react";
+import { Sparkles, AlertCircle, RefreshCw, ChevronDown, ChevronUp } from "lucide-react";
 
 type Status = "idle" | "loading" | "loaded" | "error" | "cooldown";
 
@@ -15,6 +15,7 @@ export default function AISummary() {
   const [summary, setSummary] = useState<string | null>(null);
   const [generatedAt, setGeneratedAt] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState("");
+  const [collapsed, setCollapsed] = useState(false);
 
   // Load existing summary on mount
   useEffect(() => {
@@ -84,22 +85,38 @@ export default function AISummary() {
             AI 全文总结
           </h4>
         </div>
-        {summary && status !== "loading" && (
-          <button
-            onClick={handleGenerate}
-            className="inline-flex items-center gap-1.5 px-3 py-1 text-xs rounded-sm border border-border
-              text-muted hover:text-accent hover:border-accent transition-colors"
-            title="重新生成"
-          >
-            <RefreshCw size={12} />
-            重新生成
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          {summary && status !== "loading" && (
+            <>
+              <button
+                onClick={handleGenerate}
+                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs rounded-sm border border-border
+                  text-muted hover:text-accent hover:border-accent transition-colors"
+                title="重新生成"
+              >
+                <RefreshCw size={12} />
+                重新生成
+              </button>
+              <button
+                onClick={() => setCollapsed((v) => !v)}
+                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs rounded-sm border border-border
+                  text-muted hover:text-accent hover:border-accent transition-colors"
+              >
+                {collapsed ? <ChevronDown size={12} /> : <ChevronUp size={12} />}
+                {collapsed ? "展开" : "收起"}
+              </button>
+            </>
+          )}
+        </div>
       </div>
 
       {/* Content */}
       {summary ? (
-        <div className="space-y-3">
+        <div
+          className={`space-y-3 overflow-hidden transition-all duration-300 ${
+            collapsed ? "max-h-0 opacity-0" : "max-h-[2000px] opacity-100"
+          }`}
+        >
           {summary.split("\n\n").map((paragraph, i) => (
             <p
               key={i}
