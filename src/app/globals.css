@@ -1,26 +1,147 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Light theme (default) ─── */
+:root,
+[data-theme="light"] {
+  --background: #fafaf5;
+  --foreground: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #c41e3a;
+  --card: #ffffff;
+  --border: #d4d4c8;
+
+  --chart-1: #264653;
+  --chart-2: #2a9d8f;
+  --chart-3: #e9c46a;
+  --chart-4: #f4a261;
+  --chart-5: #e76f51;
+
+  --sentiment-positive: #2a9d8f;
+  --sentiment-neutral: #e9c46a;
+  --sentiment-negative: #e76f51;
 }
 
+/* ─── Dark theme ─── */
+[data-theme="dark"] {
+  --background: #121212;
+  --foreground: #e8e8e3;
+  --muted: #9ca3af;
+  --accent: #ff4d6a;
+  --card: #1e1e1e;
+  --border: #2a2a2a;
+
+  --chart-1: #4ecdc4;
+  --chart-2: #45b7d1;
+  --chart-3: #f7dc6f;
+  --chart-4: #f0b27a;
+  --chart-5: #ec7063;
+
+  --sentiment-positive: #4ecdc4;
+  --sentiment-neutral: #f7dc6f;
+  --sentiment-negative: #ec7063;
+}
+
+/* ─── Tailwind theme tokens ─── */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-border: var(--border);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --font-headline: var(--font-playfair-display);
+  --font-serif-cn: var(--font-noto-serif-sc);
+  --font-body: var(--font-inter);
+  --font-mono-data: var(--font-jetbrains-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ─── Base ─── */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), "Noto Sans SC", system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ─── Utility: font families ─── */
+.font-headline {
+  font-family: var(--font-headline), "Playfair Display", Georgia, serif;
+}
+
+.font-serif-cn {
+  font-family: var(--font-serif-cn), "Noto Serif SC", "Songti SC", serif;
+}
+
+.font-mono-data {
+  font-family: var(--font-mono-data), "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* ─── Newspaper horizontal rules ─── */
+.rule-double {
+  border: none;
+  height: 4px;
+  border-top: 1.5px solid var(--foreground);
+  border-bottom: 1.5px solid var(--foreground);
+}
+
+.rule-single {
+  border: none;
+  height: 0;
+  border-top: 1px solid var(--border);
+}
+
+.rule-thin {
+  border: none;
+  height: 0;
+  border-top: 0.5px solid var(--muted);
+}
+
+/* ─── Pull quote ─── */
+.pull-quote {
+  position: relative;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  font-family: var(--font-serif-cn), "Noto Serif SC", serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--foreground);
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--card) 80%, transparent);
+}
+
+.pull-quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.25rem;
+  left: 0.5rem;
+  font-size: 3rem;
+  font-family: Georgia, serif;
+  color: var(--accent);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+/* ─── Scrollbar styling ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
 }

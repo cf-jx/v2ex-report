@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ban-prevention",
+    "question": "Claude 封号怎么避免？",
+    "opAnswer": "支付方式占很大部分。我之前老号用了两年多一直 Google Play 内购，保持节点没变过，一直没出问题。年前换了虚拟卡在网页端支付，一个月之后被封了。保持节点不能变化，不能今天美国明天日本，尽量避免用虚拟卡支付，风险最大。注册完 claude 不要上来就充值 pro，先养养号，用几天免费的再订阅。",
+    "aiSummary": "封号三大因素：支付方式（虚拟卡风险最高）> IP 稳定性（固定节点不切换）> 账号行为模式（新号先养再充值）。Google Play 套壳支付是目前最安全的方式。",
+    "relatedCommentIds": [29, 31, 35, 37, 42, 44, 97, 101, 129, 146],
+    "frequency": 23
+  },
+  {
+    "id": "google-play-subscription",
+    "question": "Google Play 订阅怎么操作？",
+    "opAnswer": "Google Play 其实只关心卡组织而非币种，把 Google 账号地区切换到新加坡，就可以用国内银联储蓄卡绑定支付。通过 Google Play 内购订阅 Claude/ChatGPT，相当于套了一层 Google 的壳，对 AI 平台来说支付来源是 Google，安全性最高。",
+    "aiSummary": "Google Play 订阅路径：切换 Google 账号地区到新加坡 -> 绑定国内银联储蓄卡 -> 通过 App 内购订阅。优点是支付经过 Google 中转，AI 平台只看到 Google 付款，封号风险最低。",
+    "relatedCommentIds": [11, 14, 57, 100],
+    "frequency": 19
+  },
+  {
+    "id": "vpn-node-selection",
+    "question": "VPN 节点怎么选才安全？",
+    "opAnswer": "claude 最好固定一个落地机作为出口 IP，不要频繁切换地区。如果 IP 足够干净不会跳绑定手机号。美国节点最稳，但一定要固定，不能今天洛杉矶明天纽约。",
+    "aiSummary": "核心原则：固定一个干净的美国节点，永远不切换。判断节点是否干净：访问 Claude 时不要求绑定手机号即为干净。家宽 IP > 商业静态 IP > 动态机场节点。",
+    "relatedCommentIds": [17, 46, 101, 146],
+    "frequency": 15
+  },
+  {
+    "id": "apple-gift-card",
+    "question": "苹果礼品卡怎么买最划算？",
+    "opAnswer": "支付宝地址切换成旧金山，在 pockytshop 购买美区礼品卡，或者咸鱼搜尼日利亚礼品卡也行，汇率更好。App Store 充值后直接内购订阅。",
+    "aiSummary": "两条路径：(1) 支付宝切旧金山地址 -> pockytshop 买美区卡；(2) 咸鱼买尼日利亚区礼品卡（汇率优势）。充值后通过 iOS App 内购订阅，同样是平台套壳支付，安全性较高。",
+    "relatedCommentIds": [2, 66, 136],
+    "frequency": 12
+  },
+  {
+    "id": "visa-credit-card",
+    "question": "国内 Visa 信用卡能直接订阅吗？",
+    "opAnswer": "部分银行的 Visa 信用卡可以直接在官网绑定支付，但成功率因银行而异。招行 Visa 目前反馈较多失败，可能是银行端拦截了跨境小额交易。建议优先尝试 Google Play 或 App Store 内购。",
+    "aiSummary": "Visa 直付成功率不稳定，招行 Visa 失败率较高。即使绑定成功，直接信用卡支付的封号风险也高于平台内购。建议作为备选方案，优先走 Google Play / App Store。",
+    "relatedCommentIds": [106, 160],
+    "frequency": 11
+  },
+  {
+    "id": "relay-station-risk",
+    "question": "中转站（API 代理）有什么问题？",
+    "opAnswer": "中转站的问题很多：卖用户数据、卖蒸馏数据、用假模型冒充、不明渠道搞的模型额度。本质上是一鱼多吃，用户的隐私和数据安全完全没有保障。便宜是因为你就是产品。",
+    "aiSummary": "中转站四大风险：(1) 用户对话数据被转卖；(2) 对话用于模型蒸馏训练；(3) 用低级模型冒充高级模型；(4) 使用盗刷/灰色渠道获取的 API 额度。一本万利的生意，用户承担所有风险。",
+    "relatedCommentIds": [10, 12, 33],
+    "frequency": 10
+  },
+  {
+    "id": "pro-quota",
+    "question": "Pro 订阅额度够用吗？",
+    "opAnswer": "pro 在 claude code 中使用 opus4.6 大概半小时就到 5h 限额，日常对话够用但重度编程不够。Max 5x 的话 App Store 和 Google Play 都要收过路费（30%），价格更贵。",
+    "aiSummary": "Pro ($20/月) 日常对话够用，但 Claude Code 重度使用 Opus 模型约 30 分钟触达限额。Max 5x ($100/月) 通过应用商店订阅会多收 30% 过路费。重度用户建议评估 API 直付是否更划算。",
+    "relatedCommentIds": [50, 73, 74, 138],
+    "frequency": 8
+  },
+  {
+    "id": "debit-card-solution",
+    "question": "储蓄卡可以订阅吗？",
+    "opAnswer": "Google 账号地区切到新加坡后，可以直接绑定国内银联储蓄卡。不需要信用卡，普通借记卡就行，支付时按实时汇率扣款。",
+    "aiSummary": "核心发现：Google Play 新加坡区支持银联储蓄卡。操作路径：Google 账号切换到新加坡地区 -> 添加银联借记卡作为付款方式 -> 通过 App 内购订阅。无需信用卡，门槛最低。",
+    "relatedCommentIds": [11],
+    "frequency": 7
+  }
+]
