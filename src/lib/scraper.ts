@@ -34,60 +34,111 @@ function parseMetaFromMarkdown(md: string): {
   favoriteCount: number;
   replyCount: number;
 } {
-  const titleMatch = md.match(/^#\s+(.+)$/m);
+  const titleMatch = md.match(
+    /^#\s+(.+?)(?:\s*-\s*V2EX)?$/m,
+  );
   const title = titleMatch?.[1]?.trim() ?? "Unknown";
 
-  // V2EX markdown typically has author in metadata or first mention
-  const authorMatch = md.match(/\*\*(\w+)\*\*\s*·/) || md.match(/by\s+(\w+)/i);
+  const authorMatch =
+    md.match(/\[(\w+)\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)\s*·/) ||
+    md.match(/\*\*(\w+)\*\*\s*·/);
   const author = authorMatch?.[1] ?? "unknown";
 
-  const viewMatch = md.match(/(\d+)\s*次点击/);
-  const viewCount = viewMatch ? parseInt(viewMatch[1], 10) : 0;
+  const viewMatch = md.match(/([\d,]+)\s*次点击/);
+  const viewCount = viewMatch
+    ? parseInt(viewMatch[1].replace(/,/g, ""), 10)
+    : 0;
 
-  const favMatch = md.match(/(\d+)\s*人收藏/);
-  const favoriteCount = favMatch ? parseInt(favMatch[1], 10) : 0;
+  const favMatch = md.match(/([\d,]+)\s*人收藏/);
+  const favoriteCount = favMatch
+    ? parseInt(favMatch[1].replace(/,/g, ""), 10)
+    : 0;
 
-  const replyMatch = md.match(/(\d+)\s*条回复/);
-  const replyCount = replyMatch ? parseInt(replyMatch[1], 10) : 0;
+  const replyMatch = md.match(/([\d,]+)\s*条回复/);
+  const replyCount = replyMatch
+    ? parseInt(replyMatch[1].replace(/,/g, ""), 10)
+    : 0;
 
   return { title, author, viewCount, favoriteCount, replyCount };
 }
 
-function parseCommentsFromMarkdown(md: string, startId: number): RawComment[] {
+function parseCommentsFromMarkdown(
+  md: string,
+  startId: number,
+): RawComment[] {
   const comments: RawComment[] = [];
-
-  // Match comment patterns: lines starting with "**username**" or numbered replies
-  // V2EX r.jina.ai output typically has reply blocks
   const lines = md.split("\n");
-  let currentComment: Partial<RawComment> | null = null;
   let id = startId;
 
-  for (const line of lines) {
-    // Pattern: "**username** ..." or "第 N 楼" or "@username" mentions
-    const userMatch = line.match(/^\*\*(\w+)\*\*/);
-    if (userMatch) {
-      if (currentComment?.author) {
-        comments.push(currentComment as RawComment);
-      }
-      const replyToMatch = line.match(/@(\w+)/);
-      currentComment = {
-        id: id++,
-        author: userMatch[1],
-        content: line
-          .replace(/^\*\*\w+\*\*\s*/, "")
-          .replace(/@\w+\s*/, "")
-          .trim(),
-        replyTo: replyToMatch?.[1] ?? null,
-      };
-    } else if (currentComment && line.trim() && !line.startsWith("#")) {
-      // Append content to current comment
-      currentComment.content =
-        ((currentComment.content as string) + " " + line.trim()).trim();
-    }
-  }
+  for (let i = 0; i < lines.length; i++) {
+    // Look for: **[username](https://www.v2ex.com/member/username)**<timestamp>
+    const userLineMatch = lines[i].match(
+      /^\*\*\[(\w+)\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)\*\*/,
+    );
+    if (!userLineMatch) continue;
 
-  if (currentComment?.author) {
-    comments.push(currentComment as RawComment);
+    const author = userLineMatch[1];
+
+    // Skip optional "OP" and timestamp lines
+    let j = i + 1;
+    while (j < lines.length) {
+      const trimmed = lines[j].trim();
+      if (
+        trimmed === "" ||
+        trimmed === "OP" ||
+        /^\d+\s*(天|小时|分钟|秒)/.test(trimmed) ||
+        /^via\s+(Android|iPhone)/i.test(trimmed) ||
+        /天前/.test(trimmed)
+      ) {
+        j++;
+      } else {
+        break;
+      }
+    }
+
+    // Collect content lines until next image block (avatar of next comment)
+    const contentLines: string[] = [];
+    let replyTo: string | null = null;
+
+    while (j < lines.length) {
+      const line = lines[j];
+
+      // Next comment starts with ![Image ...
+      if (line.startsWith("![Image")) break;
+      // Or pagination links
+      if (line.startsWith("[1]") || line.startsWith("[❮")) break;
+
+      const trimmed = line.trim();
+      if (trimmed) {
+        // Extract @mention
+        const mentionMatch = trimmed.match(
+          /@\[(\w+)\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)/,
+        );
+        if (mentionMatch && !replyTo) {
+          replyTo = mentionMatch[1];
+        }
+
+        // Clean: remove @[user](link) and ![heart] patterns
+        const cleaned = trimmed
+          .replace(
+            /@\[\w+\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)\s*/g,
+            "",
+          )
+          .replace(/!\[Image[^\]]*\]\([^)]*\)\s*/g, "")
+          .replace(/!\[[^\]]*\]\([^)]*\)\s*/g, "")
+          .trim();
+
+        if (cleaned) contentLines.push(cleaned);
+      }
+      j++;
+    }
+
+    const content = contentLines.join(" ").trim();
+    if (content) {
+      comments.push({ id: id++, author, content, replyTo });
+    }
+
+    // Don't skip i forward — the for loop will continue scanning
   }
 
   return comments;

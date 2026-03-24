@@ -4,10 +4,10 @@
     "title": "「教程揭秘向」扒完中转站掺假，再扒低价代充——顺便教你自己订阅 Claude/ChatGPT，一分钱不经手中间商",
     "author": "scf2024",
     "url": "https://www.v2ex.com/t/1200385",
-    "viewCount": 7894,
-    "favoriteCount": 28,
-    "replyCount": 162,
-    "lastFetched": "2026-03-24T12:00:00Z",
+    "viewCount": 8767,
+    "favoriteCount": 0,
+    "replyCount": 180,
+    "lastFetched": "2026-03-24T09:44:32.739Z",
     "totalPages": 2
   },
   "comments": [
@@ -18,7 +18,9 @@
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
@@ -28,48 +30,60 @@
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["苹果礼品卡"],
+      "topics": [
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 3,
-      "author": "scf2024",
-      "content": "PayPal 也是一种方式，不过要注意 PayPal 账号的地区设置",
-      "replyTo": "aixi134",
+      "author": "FGHWETT",
+      "content": "感谢分享",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["苹果礼品卡"],
-      "sentiment": "neutral"
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 4,
       "author": "scf2024",
-      "content": "感谢支持，希望对大家有帮助",
-      "replyTo": "liuthou",
+      "content": "本质是一样的，也是套壳支付，安卓也可以，把节点换到欧洲就能绑定 paypal ，然后 paypal 也可以绑定国内信用卡或者储蓄卡",
+      "replyTo": "aixi134",
       "likes": 0,
       "isOP": true,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "VPN/节点",
+        "Visa/信用卡",
+        "储蓄卡方案"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 5,
       "author": "scf2024",
-      "content": "Apple 设备的话建议直接走 App Store 内购，礼品卡充值最方便",
-      "replyTo": null,
+      "content": "感谢支持，希望能帮到大家",
+      "replyTo": "liuthou",
       "likes": 0,
       "isOP": true,
-      "topics": ["苹果礼品卡"],
-      "sentiment": "neutral"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 6,
       "author": "scf2024",
-      "content": "大家有问题可以直接回帖，我会尽量回复",
-      "replyTo": null,
+      "content": "不客气，对大家有用就好",
+      "replyTo": "FGHWETT",
       "likes": 0,
       "isOP": true,
-      "topics": ["感谢支持"],
-      "sentiment": "neutral"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 7,
@@ -78,7 +92,9 @@
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
@@ -88,208 +104,254 @@
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 9,
-      "author": "lovedeepl",
-      "content": "写得很详细，收藏了",
+      "author": "Green6379",
+      "content": "感谢分享！！！",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 10,
       "author": "fkdtz",
-      "content": "我愿称之为「中转站吹哨人」",
+      "content": "👍 我愿称之为「中转站吹哨人」",
       "replyTo": null,
-      "likes": 1,
+      "likes": 0,
       "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "positive"
+      "topics": [
+        "中转站"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 11,
       "author": "honda720",
-      "content": "受教了，原来 google 变新加坡就可以用储蓄卡",
+      "content": "受教了，原来 google 变新加坡就可以用储蓄卡，感谢分享，这种教程网上确实太少了，支持！",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["储蓄卡方案", "Google Play订阅"],
+      "topics": [
+        "储蓄卡方案"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 12,
       "author": "Gilfoyle26",
-      "content": "中转站，不是一鱼多吃吗？1.卖用户数据 2.卖蒸馏 3.假模型 4.不明渠道搞得模型额度",
+      "content": "中转站，不是一鱼多吃吗？ 1.卖用户数据 2.卖蒸馏 3.假模型 4.不明渠道搞得模型额度 基本的就是无本的买卖",
       "replyTo": null,
-      "likes": 1,
+      "likes": 0,
       "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "negative"
+      "topics": [
+        "中转站",
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 13,
-      "author": "scf2024",
-      "content": "是的，中转站的商业模式本身就有问题，用户数据是最大的隐患",
-      "replyTo": "Gilfoyle26",
+      "author": "jerrrrr",
+      "content": "感谢分享",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["中转站黑幕"],
-      "sentiment": "negative"
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 14,
       "author": "cyp0633",
-      "content": "Google Play 其实只关心卡组织而非币种",
+      "content": "Google Play 其实只关心卡组织而非币种，visa/amex/mastercard 人民币卡都能在美区用，即使是非人民币的银联卡也用不上",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅"],
+      "topics": [
+        "Google Play",
+        "Visa/信用卡",
+        "储蓄卡方案"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 15,
       "author": "zhonghao01",
-      "content": "现在有一种是十几块钱，只需要你提供 openai 的 token",
+      "content": "现在有一种是十几块钱，只需要你提供 openai 的 token 它就直充你自己的账号，不是 GPT Team 。 这种是什么",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["代充方式"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 16,
-      "author": "scf2024",
-      "content": "这种方式风险很高，token 给出去等于把账号控制权交出去了",
-      "replyTo": "zhonghao01",
+      "author": "yarkyaonj",
+      "content": "必须顶",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["代充方式"],
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 17,
       "author": "PC9528",
-      "content": "请问一下老哥, Chatgpt 手机端好像会检查 VPN",
+      "content": "请问一下老哥, Chatgpt 手机端好像会检查 VPN 的, 打开付款页面还没点就直接提示付款失败了(自动的)",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["VPN节点选择"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 18,
-      "author": "scf2024",
-      "content": "ChatGPT 移动端确实会检测，建议用规则代理，只让 ChatGPT 走代理",
-      "replyTo": "PC9528",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["VPN节点选择"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 19,
-      "author": "HFX3389",
-      "content": "感谢楼主，正好需要这个教程",
-      "replyTo": null,
-      "likes": 0,
-      "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "positive"
     },
     {
+      "id": 18,
+      "author": "jsutfun",
+      "content": "好像是新账号的首月 0 刀 plus ，通过 bug 帮到自己的账号上",
+      "replyTo": "zhonghao01",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 19,
+      "author": "zhonghao01",
+      "content": "感觉像是，因为能够收到一条退订的邮件。",
+      "replyTo": "jsutfun",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
+    },
+    {
       "id": 20,
-      "author": "autumncry",
-      "content": "Google Play 新加坡区绑卡有什么限制吗",
+      "author": "mipawn",
+      "content": "或许信用卡 + 地区日本也是可以的？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅"],
+      "topics": [
+        "Visa/信用卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 21,
       "author": "scf2024",
-      "content": "银联储蓄卡就行，没有特别限制，主要是地区要切对",
-      "replyTo": "autumncry",
+      "content": "你的机场节点可能被污染了，你开启全局模式，尽量选择美国节点，再进去试一试",
+      "replyTo": null,
       "likes": 0,
       "isOP": true,
-      "topics": ["Google Play订阅", "储蓄卡方案"],
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 22,
-      "author": "yhxx",
-      "content": "好文，收藏了慢慢看",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "我的理解它就是相当于帮你自动化操作了，你的账号本来就有 0 元试用资格，你自己切换到日本或者英国节点可能就会刷出来",
+      "replyTo": "jsutfun",
       "likes": 0,
-      "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
-    },
-    {
-      "id": 23,
-      "author": "lovedeepl",
-      "content": "Google Play 订阅之后在网页端登录也能用 Pro 吗？",
-      "replyTo": null,
-      "likes": 0,
-      "isOP": false,
-      "topics": ["Google Play订阅"],
+      "isOP": true,
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
-      "id": 24,
+      "id": 23,
       "author": "scf2024",
-      "content": "可以的，订阅绑定的是账号，不是设备",
-      "replyTo": "lovedeepl",
+      "content": "是的，也可以，但是我感觉用美国比较好一点，选个免税州，就能正价 20 美元订阅",
+      "replyTo": "mipawn",
       "likes": 0,
       "isOP": true,
-      "topics": ["Google Play订阅"],
+      "topics": [
+        "Pro额度"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 24,
+      "author": "zhonghao01",
+      "content": "#22 应该不是自己账号本来就有 0 刀试用。因为付费过的账号，甚至已经买了套餐且未到期的都可以直接续费一个月。",
+      "replyTo": "scf2024",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 25,
-      "author": "ob616",
-      "content": "中转站确实是灰色地带，之前用的一家突然跑路了",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "那这个就不太清楚了，可能有其他手段",
+      "replyTo": "zhonghao01",
       "likes": 0,
-      "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "negative"
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 26,
-      "author": "mipawn",
-      "content": "楼主辛苦，信息量很大",
+      "author": "qiqw",
+      "content": "如果我能找我美国朋友帮我注册, 帮我支付, 代理用 ipfoxy 的家宽能在国内用 cladue max, 是不是就完美解决了",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "VPN/节点",
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 27,
-      "author": "zhonghao01",
-      "content": "确实，token 方式想想就不安全",
+      "author": "mipawn",
+      "content": "日本的便宜一点",
       "replyTo": "scf2024",
       "likes": 0,
       "isOP": false,
-      "topics": ["代充方式"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 28,
-      "author": "HFX3389",
-      "content": "请问 Visa 信用卡直接在官网绑定可以吗？",
+      "author": "LimaEcho",
+      "content": "感谢老哥分享，我自己是 10 元 gpt team 的月抛，带质保的那种，但是也不稳定；感觉老哥分享的方式早晚能用上，等过几天用完或者对面老板跑路了，就续上，感谢好人啊",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
-      "sentiment": "neutral"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 29,
@@ -298,1444 +360,2582 @@
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["封号风控"],
-      "sentiment": "neutral"
+      "topics": [
+        "封号风控",
+        "Pro额度"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 30,
-      "author": "scf2024",
-      "content": "Google Play 内购方式目前是最安全的，被封概率最低",
-      "replyTo": "Inn0Vat10n",
+      "author": "crime1024",
+      "content": "顶一个",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["封号风控", "Google Play订阅"],
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 31,
       "author": "shineonme",
-      "content": "感谢分享，想入 Claude 的官方套餐",
+      "content": "感谢分享， 自己一直在用的是 ChatGPT PLUS + 美区 App Store + 礼品卡充值，每月续，已经有一年多了没什么问题， 想入 Claude 的官方套餐，这样的路线可行吗？ 此外一直听说 Claude 的封号很严重，这种方式会更容易被风控吗？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["封号风控"],
-      "sentiment": "positive"
+      "topics": [
+        "封号风控",
+        "苹果礼品卡"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 32,
       "author": "scf2024",
-      "content": "建议走 Google Play 或 App Store 内购，安全省心",
-      "replyTo": "shineonme",
+      "content": "理论上是完美的，但是还要考虑到浏览器指纹、DNS 泄露等问题",
+      "replyTo": "qiqw",
       "likes": 0,
       "isOP": true,
-      "topics": ["封号风控", "Google Play订阅"],
-      "sentiment": "neutral"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 33,
       "author": "PerFectTime",
-      "content": "中转就是一本万利的生意",
+      "content": "中转就是一本万利的生意，甚至可以说是 0 本万利。卖用户、卖数据、到期以后封号退款",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["中转站黑幕"],
+      "topics": [
+        "封号风控",
+        "中转站"
+      ],
       "sentiment": "negative"
     },
     {
       "id": 34,
-      "author": "qiqw",
-      "content": "学到了，之前一直不知道 Google Play 可以这样操作",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "不客气，team0 元购这个活动都持续一年多了，感觉快要结束了，现在 openai 的风控升级了",
+      "replyTo": "LimaEcho",
       "likes": 0,
-      "isOP": false,
-      "topics": ["Google Play订阅"],
-      "sentiment": "positive"
+      "isOP": true,
+      "topics": [
+        "封号风控"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 35,
       "author": "scf2024",
-      "content": "封号原因很复杂，有一些是因为虚拟卡，有一些是因为 IP 不干净，还有一些是因为账号行为异常。综合来看支付方式和 IP 稳定性是最关键的两个因素。",
-      "replyTo": null,
+      "content": "我只能说我的教程里是最正规的订阅方式，但是具体封号原因很复杂，有一些是因为虚拟卡，有一些是因为节点不干净乱切 IP ，还有一些是因为自己买 max 号做中转站，24 小时不间断运行被封禁的概率很大，还有一些是搭建的中转站被检测到，比如 sub2api 这个，貌似用这个做中转就秒封",
+      "replyTo": "Inn0Vat10n",
       "likes": 0,
       "isOP": true,
-      "topics": ["封号风控"],
-      "sentiment": "neutral"
+      "topics": [
+        "封号风控",
+        "VPN/节点",
+        "中转站",
+        "Pro额度"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 36,
-      "author": "autumncry",
-      "content": "所以新号注册完不要马上充值？",
+      "author": "PC9528",
+      "content": "我切换了很多美国节点, 也开了全局模式都无效, 是不是需要一个新账号才行了...",
       "replyTo": "scf2024",
       "likes": 0,
       "isOP": false,
-      "topics": ["封号风控"],
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 37,
       "author": "scf2024",
-      "content": "注册完 claude 不要上来就充值 pro，先养养号，用几天免费的再订阅。新号直接充值容易触发风控。",
-      "replyTo": "autumncry",
-      "likes": 2,
+      "content": "你这个就是很正规的苹果订阅方式，你买 claude 的订阅同样操作就好，claude 确实风控的严一些，你注册完 claude 不要上来就充值 pro ，可以先用免费版正常对话养养号，过个几天在买礼品卡充值比较好，然后节点不要乱换，你手机用什么节点，电脑登录时也用同样的节点，这样能减少很大的风险；然后苹果的小火箭有些默认是自动切换节点的，千万别这样设置，一定要选一个固定节点，这样最稳妥",
+      "replyTo": "shineonme",
+      "likes": 0,
       "isOP": true,
-      "topics": ["封号风控"],
+      "topics": [
+        "封号风控",
+        "VPN/节点",
+        "苹果礼品卡",
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 38,
-      "author": "lovedeepl",
-      "content": "养号这个说法第一次听说，学到了",
-      "replyTo": "scf2024",
+      "author": "ob616",
+      "content": "感谢分享 地区可以用新加坡吗，因为各方面方便点，我经常用那边的节点。或者节点地区和 google 地区不同有影响吗",
+      "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["封号风控"],
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 39,
-      "author": "zhonghao01",
-      "content": "养号确实重要，之前新注册直接充值就被封了",
-      "replyTo": null,
+      "author": "ob616",
+      "content": "原来后面就说新加坡了，我太急了哈哈",
+      "replyTo": "ob616",
       "likes": 0,
       "isOP": false,
-      "topics": ["封号风控"],
-      "sentiment": "negative"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 40,
-      "author": "Ocean810975",
-      "content": "好帖，转发了",
+      "author": "evan1",
+      "content": "PRO 1 天前 感谢分享。 请问下除了官方套餐，官方的 api 有可靠的购买方式吗？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "Pro额度"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 41,
       "author": "scf2024",
-      "content": "谢谢支持",
-      "replyTo": "Ocean810975",
+      "content": "抱歉，这个还真没涉及过",
+      "replyTo": "evan1",
       "likes": 0,
       "isOP": true,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 42,
       "author": "autumncry",
-      "content": "claude 在使用方面有什么技巧保证不被封号不",
+      "content": "claude 在使用方面有什么技巧保证不被封号不？是不是充钱了如果 ip 不干净也会被直接封？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["封号风控"],
-      "sentiment": "neutral"
+      "topics": [
+        "封号风控",
+        "VPN/节点"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 43,
-      "author": "yhxx",
-      "content": "同问，我也担心封号",
-      "replyTo": "autumncry",
+      "author": "dockerhub",
+      "content": "#15 这个就是 0 刀订阅。。。。",
+      "replyTo": "zhonghao01",
       "likes": 0,
       "isOP": false,
-      "topics": ["封号风控"],
+      "topics": [
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 44,
       "author": "scf2024",
-      "content": "支付方式占很大部分。我之前老号用了两年多一直 Google Play 内购，保持节点没变过，一直没出问题。年前换了虚拟卡在网页端支付，一个月之后被封了。虚拟卡风险最大。",
+      "content": "我觉得支付方式占有很大的部分，我的之前一个老号用了两年多一直用的 google play 内购支付，保持节点没变过，一直没出问题，然后年前换了虚拟卡在网页端支付，一个月之后被封了；我的理解就是节点干净不干净占很小一部分，主要是你要保持节点不能变化，不能今天用美国明天又用日本这样的频繁切换，然后就是支付方式要干净正规，看我帖子里教程提到的都是比较正规的，尽量避免用虚拟卡支付，风险最大。",
       "replyTo": "autumncry",
       "likes": 0,
       "isOP": true,
-      "topics": ["封号风控"],
-      "sentiment": "neutral"
+      "topics": [
+        "封号风控",
+        "Google Play",
+        "VPN/节点"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 45,
-      "author": "scf2024",
-      "content": "另外节点一定要固定，不要频繁切换地区",
+      "author": "toarya",
+      "content": "点个赞",
       "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["VPN节点选择", "封号风控"],
-      "sentiment": "neutral"
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 46,
       "author": "zhenlit",
-      "content": "比如美国节点有多个并偶尔切换，这算节点不干净嘛",
+      "content": "比如美国节点有多个并偶尔节点故障切换另外美国节点，这算节点不干净嘛？还是只看大范围切换，比如美国切日本，日本切欧洲这样大的变动",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["VPN节点选择"],
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 47,
-      "author": "scf2024",
-      "content": "同一个国家内偶尔切换问题不大，但最好还是固定一个城市的节点",
-      "replyTo": "zhenlit",
+      "author": "Haku",
+      "content": "有可能是黑卡啥的吧，代充的思路就这么些。",
+      "replyTo": "zhonghao01",
       "likes": 0,
-      "isOP": true,
-      "topics": ["VPN节点选择"],
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 48,
-      "author": "mipawn",
-      "content": "请问代充 ChatGPT Plus 靠谱吗",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "我感觉是节点或者手机的问题，你可以测测你的机场节点是不是被风控了",
+      "replyTo": "PC9528",
       "likes": 0,
-      "isOP": false,
-      "topics": ["代充方式"],
-      "sentiment": "neutral"
+      "isOP": true,
+      "topics": [
+        "封号风控",
+        "VPN/节点"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 49,
-      "author": "scf2024",
-      "content": "代充风险很高，很多是用盗刷的信用卡充的，后续可能被追回导致封号",
-      "replyTo": "mipawn",
+      "author": "grantonzhuang",
+      "content": "我定 gpt plus ，用 amex 的卡被 google play 拒了，不知道为啥 [](https://i.imgur.com/NIvxivj.png)，找了个 139 代充。下个月再试试。",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["代充方式"],
+      "isOP": false,
+      "topics": [
+        "Google Play"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 50,
       "author": "ssting",
-      "content": "20 刀一个月的 claude code 就没法用啊",
+      "content": "20 刀一个月的 claude code 就没法用啊. 太少了",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Pro额度"],
-      "sentiment": "negative"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 51,
-      "author": "scf2024",
-      "content": "Pro 额度确实不够 claude code 用，重度用户建议考虑 Max 或 API",
-      "replyTo": "ssting",
+      "author": "autumncry",
+      "content": "感谢解答。一直没敢买，就是因为支付方式和使用方式不明确，害怕扔钱被封。楼主讲的非常详细！ 另外再请教下，使用时保持固定的 ip 有什么技巧么",
+      "replyTo": "scf2024",
       "likes": 0,
-      "isOP": true,
-      "topics": ["Pro额度"],
+      "isOP": false,
+      "topics": [
+        "封号风控",
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 52,
-      "author": "testuser01",
-      "content": "mark 一下，回头按教程操作",
+      "author": "FakerLeung",
+      "content": "Mark 感谢楼主分享 但我还是想先用注册机玩一下 [](https://i.imgur.com/Iy0taMy.png)",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 53,
-      "author": "devbox",
-      "content": "感谢楼主详细的教程",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "小范围切还好，我觉得保持是一个地区就行，例如美国旧金山 01 挂了，在切一个其他的美国旧金山 02 ，尽量不要切到美国加利福尼亚这种，但是最好是能稳定一个不变",
+      "replyTo": "zhenlit",
       "likes": 0,
-      "isOP": false,
-      "topics": ["感谢支持"],
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 54,
-      "author": "nickcw",
-      "content": "之前用中转站的，现在准备自己订阅了",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "就是机场一般有很多节点嘛，你保持每一次登录 claude 都使用相同的一个固定节点，比如在手机上用了美国 01 节点，你在电脑上登录 claude 的时候也用美国 01 节点，不要切换到其他节点就好了。",
+      "replyTo": "autumncry",
       "likes": 0,
-      "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "neutral"
+      "isOP": true,
+      "topics": [
+        "VPN/节点"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 55,
       "author": "scf2024",
-      "content": "自己订阅虽然贵一点，但数据安全有保障",
-      "replyTo": "nickcw",
+      "content": "风控有好多种，信用卡的地区要和你登录用的 ip 以及付款的账单要对应上，这些有一个不满足的就会触发 stripe 的风控，ip 不干净也会直接拒卡，你可以浏览器开无痕模式，梯子使用全局节点试试",
+      "replyTo": "grantonzhuang",
       "likes": 0,
       "isOP": true,
-      "topics": ["中转站黑幕"],
-      "sentiment": "neutral"
+      "topics": [
+        "封号风控",
+        "VPN/节点",
+        "Visa/信用卡"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 56,
       "author": "autumncry",
-      "content": "储蓄卡绑定 Google Play 需要开通什么功能吗",
-      "replyTo": null,
+      "content": "机场这种会不会有其他限制呢？有没有必要买个家宽的专用节点？",
+      "replyTo": "scf2024",
       "likes": 0,
       "isOP": false,
-      "topics": ["储蓄卡方案", "Google Play订阅"],
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 57,
       "author": "asong",
-      "content": "我目前用的就是楼主的方案一，非常好使",
+      "content": "我目前用的就是楼主的方案一，非常好使，也很稳。不过头几个月忘记改免税区，导致多收了几个月的税🤣（后面改成俄罗冈就 ok 了）。 另外，目前 Claude 很容易封号，是不是需不需要套一层美国住宅 IP",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅"],
-      "sentiment": "positive"
+      "topics": [
+        "封号风控",
+        "VPN/节点"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 58,
       "author": "scf2024",
-      "content": "不需要特别开通什么，只要卡能跨境消费就行",
+      "content": "现在市面上便宜的都是伪家宽，真正的家宽一个月几十刀就没必要了吧，我反正用 claude 都是一个月十几块钱的机场，用着也没啥问题",
       "replyTo": "autumncry",
       "likes": 0,
       "isOP": true,
-      "topics": ["储蓄卡方案"],
-      "sentiment": "neutral"
+      "topics": [
+        "VPN/节点"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 59,
-      "author": "flywind",
-      "content": "不错的帖子，建议加精",
+      "author": "bonchien",
+      "content": "感谢分享，已收藏",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 60,
       "author": "scf2024",
-      "content": "哈哈谢谢",
-      "replyTo": "flywind",
+      "content": "我目前没套，可能这样做会更稳定一些",
+      "replyTo": "asong",
       "likes": 0,
       "isOP": true,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
-    },
-    {
-      "id": 61,
-      "author": "moren01",
-      "content": "Visa 信用卡可以直接绑 ChatGPT 吗",
-      "replyTo": null,
-      "likes": 0,
-      "isOP": false,
-      "topics": ["Visa信用卡"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
-      "id": 62,
-      "author": "scf2024",
-      "content": "ChatGPT 的话 Visa 成功率比 Claude 高一些，但还是建议走 Google Play",
-      "replyTo": "moren01",
+      "id": 61,
+      "author": "autumncry",
+      "content": "好嘞，这个信息太重要了。非常感谢！打算用你的教程花 20 刀试一下子了",
+      "replyTo": "scf2024",
       "likes": 0,
-      "isOP": true,
-      "topics": ["Visa信用卡", "Google Play订阅"],
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 62,
+      "author": "Albertcord",
+      "content": "想问下 GPT Team 会员号，这种也会被卖用户数据吗？也会被卖蒸馏吗？",
+      "replyTo": "Gilfoyle26",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 63,
-      "author": "nicejob",
-      "content": "收藏了，写得很好",
-      "replyTo": null,
+      "author": "Albertcord",
+      "content": "也想问下 OP ，因为感觉这种似乎暂时来说也没什么风险？",
+      "replyTo": "Albertcord",
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 64,
-      "author": "wangbo01",
-      "content": "VPN 用哪家比较好",
+      "author": "zzz22333",
+      "content": "安卓可以走 尼日利亚区吗",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["VPN节点选择"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 65,
-      "author": "scf2024",
-      "content": "VPN 不方便推荐具体的，关键是选有固定 IP 的服务",
-      "replyTo": "wangbo01",
+      "author": "Shaar",
+      "content": "1.感覺自己訂閲的額度不夠用 2.我現在在澳大利亞有個甲骨文的服務器，我所有 AI 都是走這條綫路，應該不會被封吧",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["VPN节点选择"],
-      "sentiment": "neutral"
+      "isOP": false,
+      "topics": [
+        "封号风控"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 66,
       "author": "Leeeeex",
-      "content": "claude iOS 内购就直接咸鱼搜尼日利亚礼品卡",
+      "content": "PRO 23 小时 36 分钟前 claude iOS 内购就直接咸鱼搜尼日利亚礼品卡，我一直买的一家差不多 88 块钱一个月。我的是老号，订阅了半年也没事，有同事用新号没用多久就封了。",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["苹果礼品卡"],
-      "sentiment": "neutral"
+      "topics": [
+        "封号风控",
+        "苹果礼品卡",
+        "Pro额度"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 67,
       "author": "scf2024",
-      "content": "尼日利亚区确实汇率有优势，但要注意卖家信誉",
-      "replyTo": "Leeeeex",
+      "content": "不会，这是官方的活动",
+      "replyTo": "Albertcord",
       "likes": 0,
       "isOP": true,
-      "topics": ["苹果礼品卡"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 68,
-      "author": "ob616",
-      "content": "App Store 礼品卡充值会不会被风控？",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "理论上可以，但是我没试过",
+      "replyTo": "zzz22333",
       "likes": 0,
-      "isOP": false,
-      "topics": ["苹果礼品卡", "封号风控"],
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 69,
       "author": "scf2024",
-      "content": "正规渠道买的礼品卡不会被风控，问题一般出在黑卡上",
-      "replyTo": "ob616",
+      "content": "你这个很稳定",
+      "replyTo": "Shaar",
       "likes": 0,
       "isOP": true,
-      "topics": ["苹果礼品卡", "封号风控"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 70,
-      "author": "HFX3389",
-      "content": "招行 Visa 试了一下确实不行，还是走 Google Play 吧",
+      "author": "datoujiejie221",
+      "content": "gcp 开了台永久免费的俄勒冈机器，ai 和支付都走这个节点，谷歌应该不会风控自己机器的 ip 吧",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡", "Google Play订阅"],
+      "topics": [
+        "封号风控",
+        "Google Play",
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 71,
-      "author": "happycoder",
-      "content": "干货满满，感谢楼主",
-      "replyTo": null,
+      "author": "HFX3389",
+      "content": "#11 东南亚也可以绑银联卡，但是储蓄卡能不能用就不知道了",
+      "replyTo": "honda720",
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "储蓄卡方案"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 72,
-      "author": "scf2024",
-      "content": "不客气，有问题随时问",
-      "replyTo": "happycoder",
+      "author": "HFX3389",
+      "content": "#62 Team 在 OAuth 登录 Codex 时官方不会用数据训练",
+      "replyTo": "Albertcord",
       "likes": 0,
-      "isOP": true,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 73,
       "author": "shirasu",
-      "content": "很好的教程，问题在于 pro 不够用",
+      "content": "很好的教程，问题在于 pro 不够用，max 又要被收过路费",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Pro额度"],
+      "topics": [
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 74,
       "author": "Hitori0221",
-      "content": "Claude Max 5x 现在 App Store & Google Play 都要收过路费",
+      "content": "Claude Max 5x 现在 App Store & Google Play 都要收过路费($125)了，Pro 的额度又有些捉襟见肘，很难受",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Pro额度"],
-      "sentiment": "negative"
-    },
-    {
-      "id": 75,
-      "author": "scf2024",
-      "content": "Max 走应用商店确实要多 30%，金额大的话建议直接官网 Visa 支付",
-      "replyTo": "Hitori0221",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["Pro额度", "Visa信用卡"],
+      "topics": [
+        "Google Play",
+        "苹果礼品卡",
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
-      "id": 76,
-      "author": "qiqw",
-      "content": "所以 Pro 用 Google Play，Max 用官网 Visa，是这个思路吗？",
-      "replyTo": "scf2024",
+      "id": 75,
+      "author": "nanqic",
+      "content": "感谢分享，支持一下。",
+      "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅", "Visa信用卡"],
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 76,
+      "author": "YanSeven",
+      "content": "这个方案是目前普通人能接触到的门槛最低最稳的方案，缺点就是要被 google, apple 抽税。",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 77,
       "author": "scf2024",
-      "content": "对，金额小走平台内购安全，金额大走官网省手续费",
-      "replyTo": "qiqw",
+      "content": "风控和谷歌没关系，是 openai 和 Claude 官方会风控，还有就是支付时候的 stripe 会风控",
+      "replyTo": "datoujiejie221",
       "likes": 0,
       "isOP": true,
-      "topics": ["Google Play订阅", "Visa信用卡"],
+      "topics": [
+        "封号风控",
+        "Google Play",
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 78,
-      "author": "xiaoming23",
-      "content": "请问储蓄卡需要是哪个银行的？",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "可以的，泰国或者越南都可以",
+      "replyTo": "HFX3389",
       "likes": 0,
-      "isOP": false,
-      "topics": ["储蓄卡方案"],
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 79,
       "author": "scf2024",
-      "content": "银联标志的储蓄卡都行，四大行的都可以",
-      "replyTo": "xiaoming23",
+      "content": "这个确实没办法",
+      "replyTo": "shirasu",
       "likes": 0,
       "isOP": true,
-      "topics": ["储蓄卡方案"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 80,
       "author": "Nzelites",
-      "content": "我个人目前用 glm5 其实感觉也还不错",
+      "content": "确实好文 不过我个人目前用 glm5 其实感觉也还不错？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["其他"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 81,
-      "author": "v2pser",
-      "content": "支持原创好帖",
-      "replyTo": null,
-      "likes": 0,
-      "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
-      "id": 82,
-      "author": "scf2024",
-      "content": "GLM 确实也不错，国产模型进步很大",
-      "replyTo": "Nzelites",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["其他"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 83,
-      "author": "randuser",
-      "content": "VPN 节点是不是家宽最好？",
+      "id": 81,
+      "author": "geipen",
+      "content": "港卡（中银香港或汇丰）+新加坡节点是不是被封的概率更低哦。还是大陆银行卡和港卡支付现在没区别了。",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["VPN节点选择"],
+      "topics": [
+        "封号风控",
+        "VPN/节点",
+        "Visa/信用卡"
+      ],
+      "sentiment": "negative"
+    },
+    {
+      "id": 82,
+      "author": "keemo",
+      "content": "感谢分享，另外想问下楼主，国内的 master 借记卡（非信用卡）支持订阅不~",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "Visa/信用卡",
+        "Pro额度",
+        "储蓄卡方案"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 83,
+      "author": "sddyzm",
+      "content": "自己掏钱上完整的官方计划，独立用着安心",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 84,
-      "author": "scf2024",
-      "content": "家宽 > 商业静态 IP > 机场动态节点，是这个优先级",
-      "replyTo": "randuser",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["VPN节点选择"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 85,
-      "author": "techfan99",
-      "content": "Google Play 新加坡区切换后还能用国内的 app 吗",
+      "author": "piercezzs",
+      "content": "感谢大大",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅"],
-      "sentiment": "neutral"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 85,
+      "author": "ml071987",
+      "content": "感谢分享",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 86,
-      "author": "scf2024",
-      "content": "可以的，已安装的 app 不受影响，只是商店显示的内容变了",
-      "replyTo": "techfan99",
+      "author": "chenzhihuiiiii",
+      "content": "请问有既有对应 IDE Coding plan 的订阅又能合法提供 apikey 给 openclaw 使用的方式吗",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["Google Play订阅"],
+      "isOP": false,
+      "topics": [
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 87,
-      "author": "lovedeepl",
-      "content": "明白了，准备周末操作一下",
+      "author": "chenzhihuiiiii",
+      "content": "也就是一个订阅同时解决日常工作的 IDE+私人的 openclaw",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅"],
-      "sentiment": "positive"
+      "topics": [
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 88,
       "author": "mrpzx001",
-      "content": "咸鱼 9 块钱的 gpt team，用了半个月的 5.4",
+      "content": "咸鱼 9 块钱的 gpt team ，一个月内随便换 team ， 额度用完了换一个， 账号翻车了换一个，10 块钱不到， 用了半个月的 5.4 xhigh 了",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["代充方式"],
+      "topics": [
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 89,
-      "author": "scf2024",
-      "content": "9 块钱的 team 基本是共享号或者盗刷的，随时可能失效",
-      "replyTo": "mrpzx001",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["代充方式"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 90,
-      "author": "netrunner",
-      "content": "请问有推荐的虚拟信用卡吗",
+      "author": "ChangQin",
+      "content": "感谢分享",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 90,
+      "author": "scf2024",
+      "content": "够用就好，不过建议试一试咸鱼上的几块钱的官方 gpt ，可以对比下看看有没有差距",
+      "replyTo": "Nzelites",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 91,
       "author": "scf2024",
-      "content": "不建议用虚拟卡，风控风险太高。如果一定要用，选大平台的",
-      "replyTo": "netrunner",
+      "content": "我觉得是没差别的，因为港卡也不能直接绑定支付，还是要先绑定在 Google play 上套壳支付",
+      "replyTo": "geipen",
       "likes": 0,
       "isOP": true,
-      "topics": ["Visa信用卡", "封号风控"],
-      "sentiment": "neutral"
+      "topics": [
+        "Google Play"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 92,
-      "author": "zjr01",
-      "content": "好帖，顶一下",
+      "author": "ambeta",
+      "content": "楼主走 Google Play 订阅 Claude Code 稳定使用多久了没有被封",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "封号风控",
+        "Google Play",
+        "Pro额度"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 93,
-      "author": "autumncry",
-      "content": "虚拟卡和实体 Visa 卡，风控差距真的很大吗",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "可以的，看我教程二，国内任意储蓄卡都可以",
+      "replyTo": "keemo",
       "likes": 0,
-      "isOP": false,
-      "topics": ["Visa信用卡", "封号风控"],
+      "isOP": true,
+      "topics": [
+        "储蓄卡方案"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 94,
-      "author": "scf2024",
-      "content": "差距非常大，虚拟卡的 BIN 号段很容易被识别，AI 平台有黑名单",
-      "replyTo": "autumncry",
+      "author": "madaoCN",
+      "content": "我用的也是这种，咸鱼 20 来块钱一个月，用了一周左右不知道稳不稳",
+      "replyTo": "zhonghao01",
       "likes": 0,
-      "isOP": true,
-      "topics": ["Visa信用卡", "封号风控"],
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 95,
-      "author": "coder666",
-      "content": "同意楼主，自己订阅虽然折腾但放心",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "你要是有钱的话，开一个官方的 chatgpt pro 每月 200 美元的估计能解决你的需求，但是这个用在 openclaw 上太奢侈了，这玩意消耗 token 量太大了",
+      "replyTo": "chenzhihuiiiii",
       "likes": 0,
-      "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "isOP": true,
+      "topics": [
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 96,
-      "author": "Ocean810975",
-      "content": "按教程操作成功了，Google Play 新加坡区绑储蓄卡一次过",
+      "author": "shadow1949",
+      "content": "感谢分享",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅", "储蓄卡方案"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 97,
       "author": "scf2024",
-      "content": "去年八月份就订阅了，没问题，换了虚拟卡才被封",
-      "replyTo": null,
+      "content": "我去年八月份就订阅了，没问题，不过年前换了虚拟卡直接在网页订阅才被封的",
+      "replyTo": "ambeta",
       "likes": 0,
       "isOP": true,
-      "topics": ["封号风控"],
-      "sentiment": "neutral"
+      "topics": [
+        "封号风控",
+        "Pro额度"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 98,
-      "author": "webmaster",
-      "content": "好帖收藏，等等就操作",
+      "author": "buruoyanyang",
+      "content": "方案一里面，如果我愿意被抽谷歌税，是否也能用上 Max?",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "Google Play",
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 99,
-      "author": "yhxx",
-      "content": "请问 Claude 网页端支付和 App 内购哪个更安全",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "是啊",
+      "replyTo": "buruoyanyang",
       "likes": 0,
-      "isOP": false,
-      "topics": ["封号风控"],
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 100,
       "author": "S0lution",
-      "content": "鸿蒙系统可以的",
+      "content": "鸿蒙系统可以的，比鸿蒙 4 要方便，之前老华为还得自己装谷歌套件，鸿蒙系统都在卓易通和出境易里可以直接调起 电脑上操作谷歌绑定的日区，添加国内 Visa 卡 Visa 卡办理的时候说要海淘，或者线上直接办理，记得选**免年费**的，很多银行都有 挂梯子下载 ChatGPT 软件，登自己账户订阅会直接调起 Google Pay ，添加付款方式（注意是 Google Pay 不是 OpenAI 自己那个订阅方式），我是日区账单地址随便填了一个免税的地址，卡片用 Visa ，记得自己去银行 APP 打开境外无卡消费功能，JP¥2,860 ，折合人民币 125 块 [](https://i.imgur.com/ongj2Wx.png)",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅"],
-      "sentiment": "positive"
+      "topics": [
+        "Google Play",
+        "VPN/节点",
+        "Visa/信用卡",
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 101,
       "author": "iyeatse",
-      "content": "claude 最好固定一个落地机作为出口 ip",
+      "content": "claude 最好固定一个落地机作为出口 ip ，机场万人骑的 ip 出了事容易连坐；出口 ip 最好选亚太的，这样可以跟工作时间对上，风险小一些",
       "replyTo": null,
-      "likes": 1,
+      "likes": 0,
       "isOP": false,
-      "topics": ["VPN节点选择", "封号风控"],
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 102,
-      "author": "scf2024",
-      "content": "说得对，固定出口 IP 是最重要的一条",
-      "replyTo": "iyeatse",
+      "author": "AEDaydreamer",
+      "content": "感谢科普，我目前主 app store 订阅的 chatgpt plus ，感觉略微有些不够用准备上 business 或者弄两个 20 刀。claude 上周喜提封号，不过 app store 成功退款，听说 app store 一个应用只能退款一次，现在不知道怎么订阅 Claude 好。",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["VPN节点选择"],
+      "isOP": false,
+      "topics": [
+        "封号风控",
+        "苹果礼品卡",
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 103,
-      "author": "nodeseeker",
-      "content": "请问 Warp 的 IP 算干净吗",
+      "author": "seers",
+      "content": "美亚买苹果礼品卡，可以绑银联卡，黑五还有充值活动，不过好多年前了，现在咋样不知道",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["VPN节点选择"],
-      "sentiment": "neutral"
+      "topics": [
+        "苹果礼品卡",
+        "储蓄卡方案"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 104,
-      "author": "scf2024",
-      "content": "Warp 的 IP 被滥用比较多，不算干净，建议用专线",
-      "replyTo": "nodeseeker",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["VPN节点选择"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 105,
-      "author": "gptlover",
-      "content": "ChatGPT Plus 也可以走 Google Play 吗",
+      "author": "QUIOA",
+      "content": "感谢分享",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅"],
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 105,
+      "author": "scf2024",
+      "content": "在注册几个 apple 美区账号也是可以的吧",
+      "replyTo": "AEDaydreamer",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 106,
       "author": "sytnishizuiai",
-      "content": "招行 visa，每次第一步卡号那就提示不行",
+      "content": "我安卓买的美区礼品卡，还是太贵，我美区 google play 绑定我招商 visa ，第一步输入卡号就提示我不行了。。。但我看网上和楼主都说可以，这是为什么呢？ 实在不行，只能用我老婆的苹果手机，走苹果礼品卡了。",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
-      "sentiment": "negative"
+      "topics": [
+        "Google Play",
+        "苹果礼品卡",
+        "Visa/信用卡"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 107,
       "author": "scf2024",
-      "content": "可以的，ChatGPT 安卓客户端也支持 Google Play 内购",
-      "replyTo": "gptlover",
+      "content": "安卓不用买礼品卡吧，直接在谷歌商店绑定，或者你在网页版谷歌个人中心绑定",
+      "replyTo": "sytnishizuiai",
       "likes": 0,
       "isOP": true,
-      "topics": ["Google Play订阅"],
+      "topics": [
+        "Google Play",
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 108,
-      "author": "scf2024",
-      "content": "招行 Visa 确实反馈失败的比较多，可能是银行端限制了",
-      "replyTo": "sytnishizuiai",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["Visa信用卡"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 109,
-      "author": "darknight",
-      "content": "中信 Visa 试过可以绑",
+      "author": "logiczr",
+      "content": "新加坡应该还得交 9%GST ，肉疼。 140 块的月付订阅应该是我月度消费里最高的了，但是 claude 来 review 代码真的好用😰",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
+      "topics": [
+        "Pro额度"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 109,
+      "author": "might1",
+      "content": "好奇文章是用哪个 ai 写的呢？",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 110,
-      "author": "coolman",
-      "content": "感谢楼主无私分享",
+      "author": "hhxsky",
+      "content": "这是单独聊天的客户端还是可以用 API 的？客户端订阅了再去网页端建 key 吗？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 111,
-      "author": "zhonghao01",
-      "content": "中信 Visa 确认可以，我也成功了",
-      "replyTo": "darknight",
+      "author": "jayeli",
+      "content": "感谢🙏 想请问一下 OP 方案一，我没有安卓手机可以在网页用 Google Pay 支付吗？已绑定招商 Visa 。",
+      "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
+      "topics": [
+        "Visa/信用卡"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 112,
-      "author": "nomore",
-      "content": "浦发 Visa 也行",
+      "author": "SuperPaxxs",
+      "content": "话说不能在 Apple 上购买礼品卡，然后兑换成 store 余额？然后再购买 gpt 、claude 吗？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
-      "sentiment": "positive"
+      "topics": [
+        "苹果礼品卡"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 113,
-      "author": "v2fan",
-      "content": "好帖子，学到了很多",
+      "author": "tadashiyui",
+      "content": "难受的是无论是 GPT 还是克劳德 的网页版和客户端都不是满血版，API 是降智最少的，也是最难买的",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 114,
-      "author": "scf2024",
-      "content": "不同银行的 Visa 支持情况不一样，招行最严格",
+      "author": "gigishy",
+      "content": "国内 Applepay2026 年 1 月 15 日开始能绑定 visa 卡，也能直接 Apple pay 支付。",
       "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["Visa信用卡"],
+      "isOP": false,
+      "topics": [
+        "苹果礼品卡",
+        "Visa/信用卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 115,
-      "author": "newbie2024",
-      "content": "小白问一下，Google Play 切区会影响之前买的 app 吗",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "都是个人的经验之谈，我写好了全部的草稿，用 Claude Opus4.6 开启 extendedt 润色了下",
+      "replyTo": "might1",
       "likes": 0,
-      "isOP": false,
-      "topics": ["Google Play订阅"],
-      "sentiment": "neutral"
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 116,
       "author": "scf2024",
-      "content": "不影响，已购买的 app 还是能用的",
-      "replyTo": "newbie2024",
+      "content": "不是的，就是客户端/网页端可用，然后对应 Claude code/codex 用你订阅的账号 oatuh 登陆就好",
+      "replyTo": "hhxsky",
       "likes": 0,
       "isOP": true,
-      "topics": ["Google Play订阅"],
-      "sentiment": "neutral"
+      "topics": [
+        "Pro额度"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 117,
-      "author": "aiuser",
-      "content": "支持楼主，中转站确实坑",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "不可以，网页不行，或者你可以试着在电脑下一个安卓模拟器支付",
+      "replyTo": "jayeli",
       "likes": 0,
-      "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "negative"
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 118,
-      "author": "promax",
-      "content": "有没有比 Pro 更划算的方案",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "可以啊，这个是苹果的正规操作，美区账号买美区礼品卡订阅，或者尼日利亚区账号买对应尼日利亚礼品卡订阅，不过要注意苹果新号不要立马购买订阅，苹果也会风控",
+      "replyTo": "SuperPaxxs",
       "likes": 0,
-      "isOP": false,
-      "topics": ["Pro额度"],
+      "isOP": true,
+      "topics": [
+        "封号风控",
+        "苹果礼品卡",
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 119,
       "author": "scf2024",
-      "content": "如果只是日常用 Pro 就够了，重度编程用户可以考虑 API 按量付费",
-      "replyTo": "promax",
+      "content": "Claude 是满血的吧，gpt 可能会降智",
+      "replyTo": "tadashiyui",
       "likes": 0,
       "isOP": true,
-      "topics": ["Pro额度"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 120,
-      "author": "smartdev",
-      "content": "苹果礼品卡一般去哪买靠谱",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "不可以哦，你搞错概念了，你自己可以试一试，能绑定不代表能支付，这是很多人的误区，你还是要通过买礼品卡支付的",
+      "replyTo": "gigishy",
       "likes": 0,
-      "isOP": false,
-      "topics": ["苹果礼品卡"],
+      "isOP": true,
+      "topics": [
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 121,
-      "author": "scf2024",
-      "content": "pockytshop 或者支付宝国际版都可以买到正规礼品卡",
-      "replyTo": "smartdev",
+      "author": "zx9481",
+      "content": "请问一下没有安卓手机怎么办呢",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["苹果礼品卡"],
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 122,
-      "author": "sleepycoder",
-      "content": "mark",
+      "author": "0x1350188",
+      "content": "感谢分享，回头试一试",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 123,
-      "author": "gitkid",
-      "content": "谢谢分享，这个帖子信息密度很高",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "苹果手机买礼品卡就行",
+      "replyTo": "zx9481",
       "likes": 0,
-      "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "isOP": true,
+      "topics": [
+        "苹果礼品卡"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 124,
-      "author": "applelover",
-      "content": "美区 Apple ID 注册麻烦吗",
+      "author": "LuckyRock",
+      "content": "感谢分享",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["苹果礼品卡"],
-      "sentiment": "neutral"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 125,
-      "author": "scf2024",
-      "content": "不麻烦，网上教程很多，主要是地址填美国的就行",
-      "replyTo": "applelover",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["苹果礼品卡"],
-      "sentiment": "neutral"
-    },
-    {
-      "id": 126,
-      "author": "rustfan",
-      "content": "写得好，顶",
+      "author": "EriczzZ",
+      "content": "请问一下 我上次在闲鱼买谷歌礼品卡，直接充不了，那人说得人是在美国才能充是不是被骗了啊？只是美国 IP 和美区 play 不行",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "Google Play",
+        "VPN/节点",
+        "苹果礼品卡"
+      ],
+      "sentiment": "negative"
+    },
+    {
+      "id": 126,
+      "author": "cat9life",
+      "content": "手动给楼主点赞。苹果礼品卡去哪买怎么操作，是否可以 append 一下",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "苹果礼品卡"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 127,
-      "author": "cloudnative",
-      "content": "请问 API 和 Pro 订阅可以共存吗",
-      "replyTo": null,
+      "author": "Ocean810975",
+      "content": "去 b 站搜 支付宝购买苹果礼品卡 就有视频教程，别买成国内的了，它会教你怎么调整成海外",
+      "replyTo": "cat9life",
       "likes": 0,
       "isOP": false,
-      "topics": ["Pro额度"],
+      "topics": [
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 128,
-      "author": "scf2024",
-      "content": "可以共存，API 是独立计费的，和订阅不冲突",
-      "replyTo": "cloudnative",
+      "author": "Ocean810975",
+      "content": "谷歌礼品卡卡得非常死，你就算肉身在美国有的时候都充不上得去填写工单……",
+      "replyTo": "EriczzZ",
       "likes": 0,
-      "isOP": true,
-      "topics": ["Pro额度"],
+      "isOP": false,
+      "topics": [
+        "Google Play",
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 129,
       "author": "Pig930",
-      "content": "固定节点+家宽+App Store 正规礼品卡，还是被封了两个号",
+      "content": "固定节点+家宽+App Store 正规礼品卡，还是被封了两个号，没招了",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["封号风控", "苹果礼品卡"],
+      "topics": [
+        "封号风控",
+        "VPN/节点",
+        "苹果礼品卡"
+      ],
       "sentiment": "negative"
     },
     {
       "id": 130,
-      "author": "scf2024",
-      "content": "这种情况可能是账号行为触发了风控，比如大量调用或者使用了违规内容",
-      "replyTo": "Pig930",
+      "author": "hnhertt",
+      "content": "苹果美区 ID + 美区 PayPal + Visa 信用卡，目前可以。",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["封号风控"],
+      "isOP": false,
+      "topics": [
+        "苹果礼品卡",
+        "Visa/信用卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 131,
-      "author": "hellv2",
-      "content": "感谢分享，非常实用",
-      "replyTo": null,
+      "author": "lovedeepl",
+      "content": "今天刚封的吗",
+      "replyTo": "Pig930",
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 132,
-      "author": "tinybird",
-      "content": "有人试过美区 PayPal 绑国内双币卡吗",
+      "author": "xiao8276",
+      "content": "感谢分享 哎 不是白嫖啊？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
-      "sentiment": "neutral"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 133,
-      "author": "scf2024",
-      "content": "可以试，但 PayPal 国内双币卡绑定成功率不高",
-      "replyTo": "tinybird",
+      "author": "qiqw",
+      "content": "#32 老哥, 我已经让我朋友帮我注册, 并且开好 claude max 订阅了, 不过 我买的那个 IP 是美国纽约, 我那朋友的 IP 在马里兰州帮我订阅的, 如果我现在登录是不是有很大的可能被封",
+      "replyTo": "scf2024",
       "likes": 0,
-      "isOP": true,
-      "topics": ["Visa信用卡"],
+      "isOP": false,
+      "topics": [
+        "封号风控",
+        "VPN/节点",
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 134,
-      "author": "devtool",
-      "content": "中转站那些所谓的 3.5 免费其实都是引流",
+      "author": "yangwcool",
+      "content": "感谢 OP 。一直以为中国区和 ChatGPT 无缘了",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "negative"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 135,
-      "author": "linuxer",
-      "content": "赞同楼主观点，数据安全最重要",
+      "author": "dinjufen",
+      "content": "我想问下用过 pro 的人，平均每天能用多久？我也挺想买的，但是怕实际用起来额度太少了",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "positive"
+      "topics": [
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 136,
       "author": "scf2024",
-      "content": "支付宝地址切换成旧金山，在 pockytshop 购买美区礼品卡，操作很简单",
-      "replyTo": null,
-      "likes": 1,
+      "content": "支付宝地址切换成旧金山，然后首页往下翻有一个超值抢购，点击第一个大牌礼卡进去划到最下面有一个 pockytshop 点击去然后选择 app store 相关的礼品卡即可购买，注意一定要确保你的苹果账号是美区的！",
+      "replyTo": "cat9life",
+      "likes": 0,
       "isOP": true,
-      "topics": ["苹果礼品卡"],
+      "topics": [
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 137,
-      "author": "pydev",
-      "content": "API 按量付费适合轻度用户",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "实际封号有很多原因，我只能说有一定风险",
+      "replyTo": "qiqw",
       "likes": 0,
-      "isOP": false,
-      "topics": ["Pro额度"],
-      "sentiment": "neutral"
+      "isOP": true,
+      "topics": [
+        "封号风控"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 138,
       "author": "scf2024",
-      "content": "pro 在 claude code 中使用 opus4.6 大概半小时就到 5h 限额",
-      "replyTo": null,
+      "content": "之前没有双倍额度的时候，开的 pro 在 claude code 中使用 opus4.6 大概半小时就到 5h 限额，最近搞活动，有双倍额度，大概能用一个多小时到达限额吧",
+      "replyTo": "dinjufen",
       "likes": 0,
       "isOP": true,
-      "topics": ["Pro额度"],
+      "topics": [
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 139,
-      "author": "gogogo",
-      "content": "半小时就限额也太快了",
-      "replyTo": "scf2024",
+      "author": "scf2024",
+      "content": "安卓谷歌礼品卡不要碰，基本用不了，礼品卡的玩法是苹果端操作的",
+      "replyTo": "EriczzZ",
       "likes": 0,
-      "isOP": false,
-      "topics": ["Pro额度"],
-      "sentiment": "negative"
+      "isOP": true,
+      "topics": [
+        "Google Play",
+        "苹果礼品卡"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 140,
-      "author": "webworker",
-      "content": "好贴顶起来",
-      "replyTo": null,
+      "author": "dinjufen",
+      "content": "#138 好吧，那感觉还是太少了。。感觉至少两三小时达到限额的标准才够我用",
+      "replyTo": "scf2024",
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 141,
-      "author": "nodejser",
-      "content": "请问储蓄卡扣款是人民币还是美元",
+      "author": "zhangsimon",
+      "content": "请教下楼主 Claude Code 怎么注册啊，卡在海外手机号验证码上了",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["储蓄卡方案"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 142,
-      "author": "scf2024",
-      "content": "Google Play 新加坡区扣的是新加坡元，银联自动按汇率转人民币",
-      "replyTo": "nodejser",
+      "author": "skwyl",
+      "content": "感谢！！！",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["储蓄卡方案", "Google Play订阅"],
-      "sentiment": "neutral"
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 143,
-      "author": "v2exfan",
-      "content": "这个帖子值得置顶",
-      "replyTo": null,
+      "author": "leegoo",
+      "content": "真十几块钱，可以看我上篇文章",
+      "replyTo": "zhonghao01",
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 144,
-      "author": "hackernews",
-      "content": "中转站的问题很多人不知道，楼主做了好事",
+      "author": "superkite",
+      "content": "感谢分享，看评论没人提到 20 块的咸鱼 gpt plus 代充，这种是从哪里搞来的，会有封号风险吗",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "positive"
+      "topics": [
+        "封号风控"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 145,
-      "author": "scf2024",
-      "content": "希望更多人了解中转站的风险，保护好自己的数据",
-      "replyTo": "hackernews",
+      "author": "SwordSong",
+      "content": "感谢，我一直纳闷我 gpt 付款为什么的每个月是 20 刀多一些，原来是税",
+      "replyTo": null,
       "likes": 0,
-      "isOP": true,
-      "topics": ["中转站黑幕"],
-      "sentiment": "neutral"
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 146,
       "author": "scf2024",
-      "content": "如果 IP 足够干净不会跳绑定手机号",
-      "replyTo": null,
-      "likes": 1,
+      "content": "如果 IP 足够干净的话，不会跳绑定手机号；如果跳了的话去接码平台接收个验证码，我是用的 hero-sms 接的码，可以选一些小众国家也就$0.05 一个码",
+      "replyTo": "zhangsimon",
+      "likes": 0,
       "isOP": true,
-      "topics": ["VPN节点选择", "封号风控"],
+      "topics": [
+        "VPN/节点"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 147,
-      "author": "autumncry",
-      "content": "所以注册时不要求绑手机号就说明节点干净？",
-      "replyTo": "scf2024",
+      "author": "scf2024",
+      "content": "上面提到了，这种就是 0 元购刷出来的或者用的黑卡",
+      "replyTo": "superkite",
       "likes": 0,
-      "isOP": false,
-      "topics": ["VPN节点选择"],
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 148,
       "author": "scf2024",
-      "content": "对，这是一个很好的判断标准",
-      "replyTo": "autumncry",
+      "content": "是的只适合轻度使用，重度至少要开个 max 账号",
+      "replyTo": "dinjufen",
       "likes": 0,
       "isOP": true,
-      "topics": ["VPN节点选择"],
+      "topics": [
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 149,
-      "author": "techbro",
-      "content": "总结得太好了，存了",
+      "author": "a852695",
+      "content": "所以第三方来路不明的大概率是坑。",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 150,
-      "author": "codemaster",
-      "content": "有没有人测试过 Mastercard 能不能用",
+      "author": "acerphoenix",
+      "content": "google pay 不支持银联+visa 双币卡,我买 diabloII 时发现的, 得办个多币种.",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
-      "sentiment": "neutral"
+      "topics": [
+        "Visa/信用卡",
+        "储蓄卡方案"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 151,
       "author": "scf2024",
-      "content": "Mastercard 也可以，和 Visa 类似，看发卡行",
-      "replyTo": "codemaster",
+      "content": "Googleplay 是商店内购的，亚洲区支持银联，Googlepay 没怎么用过",
+      "replyTo": "acerphoenix",
       "likes": 0,
       "isOP": true,
-      "topics": ["Visa信用卡"],
-      "sentiment": "neutral"
+      "topics": [
+        "Google Play",
+        "储蓄卡方案"
+      ],
+      "sentiment": "positive"
     },
     {
       "id": 152,
-      "author": "apifirst",
-      "content": "感谢这么详细的对比",
+      "author": "lovedeepl",
+      "content": "Play 商店地区是美国 可以 绑定国家的 visa 卡吗？",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
-      "sentiment": "positive"
+      "topics": [
+        "Visa/信用卡"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 153,
-      "author": "mobilefan",
-      "content": "安卓用户首选 Google Play 了",
+      "author": "yhxx",
+      "content": "咦我用 Apple 商店的订阅可以买 GPT 呀 Claude Code 确实是不行 话说安卓手机切美区 Google Play 这样订阅的新号活下来的概率会大一点？被封得太狠了",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["Google Play订阅"],
-      "sentiment": "positive"
+      "topics": [
+        "封号风控",
+        "Google Play",
+        "苹果礼品卡",
+        "Pro额度"
+      ],
+      "sentiment": "negative"
     },
     {
       "id": 154,
-      "author": "idev",
-      "content": "苹果用户首选 App Store 礼品卡",
-      "replyTo": null,
+      "author": "scf2024",
+      "content": "可以绑定中国的任意外币信用卡",
+      "replyTo": "lovedeepl",
       "likes": 0,
-      "isOP": false,
-      "topics": ["苹果礼品卡"],
-      "sentiment": "positive"
+      "isOP": true,
+      "topics": [
+        "Visa/信用卡"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 155,
       "author": "scf2024",
-      "content": "对，不同平台选最适合自己的方式就好",
-      "replyTo": null,
+      "content": "你是直接就能订阅吗，用的什么卡",
+      "replyTo": "yhxx",
       "likes": 0,
       "isOP": true,
-      "topics": ["Google Play订阅", "苹果礼品卡"],
+      "topics": [
+        "Pro额度"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 156,
-      "author": "dataeng",
-      "content": "中转站蒸馏数据这个是真的吗",
-      "replyTo": null,
+      "author": "yhxx",
+      "content": "直接美区 Apple ID + 官网买的苹果礼品卡，不过也是前几个月的了，可能最近又不行了？",
+      "replyTo": "scf2024",
       "likes": 0,
       "isOP": false,
-      "topics": ["中转站黑幕"],
+      "topics": [
+        "苹果礼品卡"
+      ],
       "sentiment": "neutral"
     },
     {
       "id": 157,
       "author": "scf2024",
-      "content": "有实锤的，之前有人分析过中转站的流量，确实在做数据收集",
-      "replyTo": "dataeng",
+      "content": "我觉得通过 google play 订阅是比较稳的，然后 claude 你如果刚注册的新号就去订阅 pro ，风控也会比较高，可以先免费用几天养养号，然后再订阅",
+      "replyTo": "yhxx",
       "likes": 0,
       "isOP": true,
-      "topics": ["中转站黑幕"],
-      "sentiment": "negative"
+      "topics": [
+        "封号风控",
+        "Google Play",
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 158,
-      "author": "fullstack",
-      "content": "看完直接取消了中转站订阅",
+      "author": "Saunak",
+      "content": "请教下楼主。我之前用方案 1 ，成功在 安卓 google play 订阅了 plus ，美区魔法。现在还在 plus 订阅末尾几天，想升级 200 刀的 gpt pro 。 网页端切换订阅为 pro ，让切换到移动端升级，提升《你似乎已有有效的移动订阅。切换到你的移动应用以升级》。 移动端提示《购买不成功，请稍后再试》 ，和之前订阅成功时候的网络环境应该一致，是因为 plus 还没过期？还是信用卡 美元余额不够？（一直用的工行星座卡，需要预存没用） 但是我现在似乎都进不去修改订阅，我理解应该和信用卡余额无关？还没到支付的环节。就是不知道应该如何才能切换到 pro",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["中转站黑幕"],
-      "sentiment": "positive"
+      "topics": [
+        "Google Play",
+        "Visa/信用卡",
+        "Pro额度"
+      ],
+      "sentiment": "neutral"
     },
     {
       "id": 159,
       "author": "scf2024",
-      "content": "明智的选择",
-      "replyTo": "fullstack",
+      "content": "我感觉是要等到你的 plus 过期在直接订阅 pro 可能就好了，然后信用卡不是有固定额度吗不需要预存吧",
+      "replyTo": "Saunak",
       "likes": 0,
       "isOP": true,
-      "topics": ["中转站黑幕"],
+      "topics": [
+        "Visa/信用卡",
+        "Pro额度"
+      ],
       "sentiment": "positive"
     },
     {
       "id": 160,
       "author": "sytnishizuiai",
-      "content": "招行 visa，每次第一步卡号那就提示不行了",
-      "replyTo": null,
+      "content": "我试过了，招行 visa ，每次第一步卡号那就提示不行了，所以被迫买了礼品卡，但是美区的卡很恶心，很难充进去，大部分人不用尝试了，会浪费钱。",
+      "replyTo": "scf2024",
       "likes": 0,
       "isOP": false,
-      "topics": ["Visa信用卡"],
-      "sentiment": "negative"
-    },
-    {
-      "id": 161,
-      "author": "scf2024",
-      "content": "招行 Visa 建议放弃直付，走 Google Play 最省心",
-      "replyTo": "sytnishizuiai",
-      "likes": 0,
-      "isOP": true,
-      "topics": ["Visa信用卡", "Google Play订阅"],
+      "topics": [
+        "苹果礼品卡",
+        "Visa/信用卡"
+      ],
       "sentiment": "neutral"
     },
     {
+      "id": 161,
+      "author": "lovedeepl",
+      "content": "有个问题请教一下，被封禁了能不能申请退款",
+      "replyTo": "scf2024",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "封号风控"
+      ],
+      "sentiment": "negative"
+    },
+    {
       "id": 162,
-      "author": "lastcoder",
-      "content": "感谢楼主，帖子收尾了还在认真回复",
+      "author": "lovedeepl",
+      "content": "我也有招行 VISA ，准备晚上试试的",
+      "replyTo": "sytnishizuiai",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "Visa/信用卡"
+      ],
+      "sentiment": "neutral"
+    },
+    {
+      "id": 163,
+      "author": "scf2024",
+      "content": "如果是第一次封禁，基本上封禁之后立马全额退款，这是一些 AI 中转站的操作，可以看我上一篇帖子： [https://www.v2ex.com/t/1200135?p=1#reply70](https://www.v2ex.com/t/1200135?p=1#reply70) 如果用相同的卡第二次付款基本上不会退款",
+      "replyTo": "lovedeepl",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "中转站"
+      ],
+      "sentiment": "negative"
+    },
+    {
+      "id": 164,
+      "author": "scf2024",
+      "content": "你是不是哪里操作的不对，首先确保你的 google 账号地区，如果是美区就绑定国内信用卡，如果是亚洲区，比如新加坡，就绑定国内的储蓄卡都可以正常绑定正常支付的。然后 google play 千万别买礼品卡，没用的",
+      "replyTo": "sytnishizuiai",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "Google Play",
+        "苹果礼品卡",
+        "Visa/信用卡",
+        "储蓄卡方案"
+      ],
+      "sentiment": "neutral"
+    },
+    {
+      "id": 165,
+      "author": "ynxh",
+      "content": "感谢分享",
       "replyTo": null,
       "likes": 0,
       "isOP": false,
-      "topics": ["感谢支持"],
+      "topics": [
+        "其他讨论"
+      ],
       "sentiment": "positive"
+    },
+    {
+      "id": 166,
+      "author": "Saunak",
+      "content": "#160 我用的是工行的学生卡，这种卡之前是必须先买美元才能用。可能和其他的 visa 情况有点不同。xhs 我看到有个人也是改不了 pro ，但最后也没看到 ta 解决。目前只能等 plus 过期看看是否能操作。 但我这个订阅还有个异常。我之前 plus 续订了 2 个月都是用工行的卡转的 google play ，但最后这一次是 [wild.ai](http://wild.ai/) 提示我有余额，就补了几刀续订的。目前账号没有被封，正常使用，但不清楚这个改不了订阅的情况是否也和用了 [wild.ai](http://wild.ai/) 有关",
+      "replyTo": "sytnishizuiai",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "封号风控",
+        "Google Play",
+        "Visa/信用卡",
+        "Pro额度"
+      ],
+      "sentiment": "negative"
+    },
+    {
+      "id": 167,
+      "author": "eisuto",
+      "content": "收藏",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 168,
+      "author": "cyk9944",
+      "content": "Claude 太严了不搞了，chatgpt 我平时用香港或台湾节点，play 市场付款地区选这些地区也可以的吧？机场台湾也不知道是哪个地区，比如一会儿台北一会儿台南我也不知道，那是不是香港这种节点更好，不容易被风控",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "封号风控",
+        "VPN/节点"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 169,
+      "author": "scf2024",
+      "content": "可以办一个招商银行的 VISA 信用卡没有年费，也不是预付的，我一直用着正常",
+      "replyTo": "Saunak",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "Visa/信用卡"
+      ],
+      "sentiment": "neutral"
+    },
+    {
+      "id": 170,
+      "author": "scf2024",
+      "content": "chatgpt 也是不支持香港的吧，台湾应该可以的",
+      "replyTo": "cyk9944",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 171,
+      "author": "bigpapapa1994",
+      "content": "Claude 不是要封中国区的账号的咩，除了代理还要有稳定直连的代理才行（成本+折腾） 我自己走的 ofox 或者 openrouter ，懒得费劲",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "VPN/节点"
+      ],
+      "sentiment": "negative"
+    },
+    {
+      "id": 172,
+      "author": "limuru",
+      "content": "我记得几年前我的国内招商的 visa 就别 gpt 给 ban 了，续了 2 个月突然给我拉黑了",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "封号风控",
+        "Visa/信用卡"
+      ],
+      "sentiment": "neutral"
+    },
+    {
+      "id": 173,
+      "author": "vsomeone",
+      "content": "修改订阅就是要付款呀，扣费失败可不就“购买不成功”了。如果已经有 Plus 订阅再升级 Pro 只会让你补差价的",
+      "replyTo": "Saunak",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "Pro额度"
+      ],
+      "sentiment": "negative"
+    },
+    {
+      "id": 174,
+      "author": "EriczzZ",
+      "content": "订了 codex 又想退了 能出个退款教程吗？",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
+    },
+    {
+      "id": 175,
+      "author": "scf2024",
+      "content": "你直接给 gpt 官方发邮件，可以退的，用 AI 生成个英文模版",
+      "replyTo": "EriczzZ",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
+    },
+    {
+      "id": 176,
+      "author": "japhetjiu699",
+      "content": "我理解的中转站是：去逆向官网网页端，然后再封装成接口，然后对外提供服务。这样看下来，其实就是不同国家，不同的收费，白嫖官网的一些福利，真的是信息差🤣",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "中转站"
+      ],
+      "sentiment": "negative"
+    },
+    {
+      "id": 177,
+      "author": "tinyu",
+      "content": "似乎没看到链接? [](https://i.imgur.com/ktStrP0.png)",
+      "replyTo": null,
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
+    },
+    {
+      "id": 178,
+      "author": "scf2024",
+      "content": "这个图床看不到图片",
+      "replyTo": "tinyu",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "neutral"
+    },
+    {
+      "id": 179,
+      "author": "scf2024",
+      "content": "笔误，是按上面的步骤改就好，然后奇怪了，我手机上可以看到你的图片，电脑上看不到",
+      "replyTo": "tinyu",
+      "likes": 0,
+      "isOP": true,
+      "topics": [
+        "其他讨论"
+      ],
+      "sentiment": "positive"
+    },
+    {
+      "id": 180,
+      "author": "silypie",
+      "content": "天猫买的中国区充值卡，能在美区 App Store 用吗",
+      "replyTo": "shineonme",
+      "likes": 0,
+      "isOP": false,
+      "topics": [
+        "苹果礼品卡"
+      ],
+      "sentiment": "neutral"
     }
   ],
   "analysis": {
     "topUsers": [
-      { "name": "scf2024", "count": 45, "isOP": true },
-      { "name": "autumncry", "count": 5, "isOP": false },
-      { "name": "zhonghao01", "count": 4, "isOP": false },
-      { "name": "lovedeepl", "count": 4, "isOP": false },
-      { "name": "HFX3389", "count": 3, "isOP": false },
-      { "name": "yhxx", "count": 3, "isOP": false },
-      { "name": "ob616", "count": 2, "isOP": false },
-      { "name": "mipawn", "count": 2, "isOP": false },
-      { "name": "qiqw", "count": 2, "isOP": false },
-      { "name": "Ocean810975", "count": 2, "isOP": false }
+      {
+        "name": "scf2024",
+        "count": 59,
+        "isOP": true
+      },
+      {
+        "name": "autumncry",
+        "count": 4,
+        "isOP": false
+      },
+      {
+        "name": "lovedeepl",
+        "count": 4,
+        "isOP": false
+      },
+      {
+        "name": "zhonghao01",
+        "count": 3,
+        "isOP": false
+      },
+      {
+        "name": "PC9528",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "mipawn",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "qiqw",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "ob616",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "Albertcord",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "HFX3389",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "chenzhihuiiiii",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "sytnishizuiai",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "EriczzZ",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "Ocean810975",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "dinjufen",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "yhxx",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "Saunak",
+        "count": 2,
+        "isOP": false
+      },
+      {
+        "name": "liuthou",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "aixi134",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "FGHWETT",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "ChuanlongYou",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "jibenmima",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Green6379",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "fkdtz",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "honda720",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Gilfoyle26",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "jerrrrr",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "cyp0633",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "yarkyaonj",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "jsutfun",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "LimaEcho",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Inn0Vat10n",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "crime1024",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "shineonme",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "PerFectTime",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "evan1",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "dockerhub",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "toarya",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "zhenlit",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Haku",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "grantonzhuang",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "ssting",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "FakerLeung",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "asong",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "bonchien",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "zzz22333",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Shaar",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Leeeeex",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "datoujiejie221",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "shirasu",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Hitori0221",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "nanqic",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "YanSeven",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Nzelites",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "geipen",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "keemo",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "sddyzm",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "piercezzs",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "ml071987",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "mrpzx001",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "ChangQin",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "ambeta",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "madaoCN",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "shadow1949",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "buruoyanyang",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "S0lution",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "iyeatse",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "AEDaydreamer",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "seers",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "QUIOA",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "logiczr",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "might1",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "hhxsky",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "jayeli",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "SuperPaxxs",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "tadashiyui",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "gigishy",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "zx9481",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "0x1350188",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "LuckyRock",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "cat9life",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "Pig930",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "hnhertt",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "xiao8276",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "yangwcool",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "zhangsimon",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "skwyl",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "leegoo",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "superkite",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "SwordSong",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "a852695",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "acerphoenix",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "ynxh",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "eisuto",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "cyk9944",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "bigpapapa1994",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "limuru",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "vsomeone",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "japhetjiu699",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "tinyu",
+        "count": 1,
+        "isOP": false
+      },
+      {
+        "name": "silypie",
+        "count": 1,
+        "isOP": false
+      }
     ],
     "topicDistribution": [
-      { "name": "封号风控", "count": 23, "icon": "\ud83d\udd25", "color": "#E76F51" },
-      { "name": "Google Play订阅", "count": 19, "icon": "\ud83d\udcb3", "color": "#2A9D8F" },
-      { "name": "VPN节点选择", "count": 15, "icon": "\ud83c\udf10", "color": "#264653" },
-      { "name": "苹果礼品卡", "count": 12, "icon": "\ud83c\udf4e", "color": "#E9C46A" },
-      { "name": "Visa信用卡", "count": 11, "icon": "\ud83c\udfe6", "color": "#6366f1" },
-      { "name": "中转站黑幕", "count": 10, "icon": "\u26a0\ufe0f", "color": "#C41E3A" },
-      { "name": "Pro额度", "count": 8, "icon": "\ud83d\udcb0", "color": "#F4A261" },
-      { "name": "储蓄卡方案", "count": 7, "icon": "\ud83d\udcf1", "color": "#94a3b8" }
+      {
+        "name": "其他讨论",
+        "count": 74,
+        "icon": "💬",
+        "color": "#264653"
+      },
+      {
+        "name": "Pro额度",
+        "count": 36,
+        "icon": "📊",
+        "color": "#b5838d"
+      },
+      {
+        "name": "封号风控",
+        "count": 31,
+        "icon": "🚫",
+        "color": "#ffb4a2"
+      },
+      {
+        "name": "VPN/节点",
+        "count": 30,
+        "icon": "🌐",
+        "color": "#e9c46a"
+      },
+      {
+        "name": "苹果礼品卡",
+        "count": 29,
+        "icon": "🍎",
+        "color": "#2a9d8f"
+      },
+      {
+        "name": "Visa/信用卡",
+        "count": 22,
+        "icon": "💳",
+        "color": "#f4a261"
+      },
+      {
+        "name": "Google Play",
+        "count": 21,
+        "icon": "🛒",
+        "color": "#e5989b"
+      },
+      {
+        "name": "储蓄卡方案",
+        "count": 10,
+        "icon": "💰",
+        "color": "#e76f51"
+      },
+      {
+        "name": "中转站",
+        "count": 6,
+        "icon": "🔄",
+        "color": "#6d6875"
+      }
     ],
     "sentimentBreakdown": {
-      "positive": 52,
-      "neutral": 38,
-      "negative": 10
+      "positive": 51,
+      "neutral": 102,
+      "negative": 27
     },
     "hotComments": [
       {
-        "id": 37,
-        "author": "scf2024",
-        "content": "注册完 claude 不要上来就充值 pro，先养养号，用几天免费的再订阅。新号直接充值容易触发风控。",
-        "replyTo": "autumncry",
-        "likes": 2,
-        "isOP": true,
-        "topics": ["封号风控"],
-        "sentiment": "neutral"
-      },
-      {
-        "id": 44,
-        "author": "scf2024",
-        "content": "支付方式占很大部分。我之前老号用了两年多一直 Google Play 内购，保持节点没变过，一直没出问题。年前换了虚拟卡在网页端支付，一个月之后被封了。虚拟卡风险最大。",
-        "replyTo": "autumncry",
-        "likes": 0,
-        "isOP": true,
-        "topics": ["封号风控"],
-        "sentiment": "neutral"
-      },
-      {
-        "id": 101,
-        "author": "iyeatse",
-        "content": "claude 最好固定一个落地机作为出口 ip",
-        "replyTo": null,
-        "likes": 1,
-        "isOP": false,
-        "topics": ["VPN节点选择", "封号风控"],
-        "sentiment": "neutral"
-      },
-      {
-        "id": 146,
-        "author": "scf2024",
-        "content": "如果 IP 足够干净不会跳绑定手机号",
-        "replyTo": null,
-        "likes": 1,
-        "isOP": true,
-        "topics": ["VPN节点选择", "封号风控"],
-        "sentiment": "neutral"
-      },
-      {
-        "id": 12,
-        "author": "Gilfoyle26",
-        "content": "中转站，不是一鱼多吃吗？1.卖用户数据 2.卖蒸馏 3.假模型 4.不明渠道搞得模型额度",
-        "replyTo": null,
-        "likes": 1,
-        "isOP": false,
-        "topics": ["中转站黑幕"],
-        "sentiment": "negative"
-      },
-      {
-        "id": 129,
-        "author": "Pig930",
-        "content": "固定节点+家宽+App Store 正规礼品卡，还是被封了两个号",
+        "id": 100,
+        "author": "S0lution",
+        "content": "鸿蒙系统可以的，比鸿蒙 4 要方便，之前老华为还得自己装谷歌套件，鸿蒙系统都在卓易通和出境易里可以直接调起 电脑上操作谷歌绑定的日区，添加国内 Visa 卡 Visa 卡办理的时候说要海淘，或者线上直接办理，记得选**免年费**的，很多银行都有 挂梯子下载 ChatGPT 软件，登自己账户订阅会直接调起 Google Pay ，添加付款方式（注意是 Google Pay 不是 OpenAI 自己那个订阅方式），我是日区账单地址随便填了一个免税的地址，卡片用 Visa ，记得自己去银行 APP 打开境外无卡消费功能，JP¥2,860 ，折合人民币 125 块 [](https://i.imgur.com/ongj2Wx.png)",
         "replyTo": null,
         "likes": 0,
         "isOP": false,
-        "topics": ["封号风控", "苹果礼品卡"],
-        "sentiment": "negative"
+        "topics": [
+          "Google Play",
+          "VPN/节点",
+          "Visa/信用卡",
+          "Pro额度"
+        ],
+        "sentiment": "neutral"
       },
       {
-        "id": 136,
-        "author": "scf2024",
-        "content": "支付宝地址切换成旧金山，在 pockytshop 购买美区礼品卡，操作很简单",
+        "id": 158,
+        "author": "Saunak",
+        "content": "请教下楼主。我之前用方案 1 ，成功在 安卓 google play 订阅了 plus ，美区魔法。现在还在 plus 订阅末尾几天，想升级 200 刀的 gpt pro 。 网页端切换订阅为 pro ，让切换到移动端升级，提升《你似乎已有有效的移动订阅。切换到你的移动应用以升级》。 移动端提示《购买不成功，请稍后再试》 ，和之前订阅成功时候的网络环境应该一致，是因为 plus 还没过期？还是信用卡 美元余额不够？（一直用的工行星座卡，需要预存没用） 但是我现在似乎都进不去修改订阅，我理解应该和信用卡余额无关？还没到支付的环节。就是不知道应该如何才能切换到 pro",
         "replyTo": null,
-        "likes": 1,
-        "isOP": true,
-        "topics": ["苹果礼品卡"],
+        "likes": 0,
+        "isOP": false,
+        "topics": [
+          "Google Play",
+          "Visa/信用卡",
+          "Pro额度"
+        ],
+        "sentiment": "neutral"
+      },
+      {
+        "id": 102,
+        "author": "AEDaydreamer",
+        "content": "感谢科普，我目前主 app store 订阅的 chatgpt plus ，感觉略微有些不够用准备上 business 或者弄两个 20 刀。claude 上周喜提封号，不过 app store 成功退款，听说 app store 一个应用只能退款一次，现在不知道怎么订阅 Claude 好。",
+        "replyTo": null,
+        "likes": 0,
+        "isOP": false,
+        "topics": [
+          "封号风控",
+          "苹果礼品卡",
+          "Pro额度"
+        ],
+        "sentiment": "neutral"
+      },
+      {
+        "id": 31,
+        "author": "shineonme",
+        "content": "感谢分享， 自己一直在用的是 ChatGPT PLUS + 美区 App Store + 礼品卡充值，每月续，已经有一年多了没什么问题， 想入 Claude 的官方套餐，这样的路线可行吗？ 此外一直听说 Claude 的封号很严重，这种方式会更容易被风控吗？",
+        "replyTo": null,
+        "likes": 0,
+        "isOP": false,
+        "topics": [
+          "封号风控",
+          "苹果礼品卡"
+        ],
+        "sentiment": "neutral"
+      },
+      {
+        "id": 106,
+        "author": "sytnishizuiai",
+        "content": "我安卓买的美区礼品卡，还是太贵，我美区 google play 绑定我招商 visa ，第一步输入卡号就提示我不行了。。。但我看网上和楼主都说可以，这是为什么呢？ 实在不行，只能用我老婆的苹果手机，走苹果礼品卡了。",
+        "replyTo": null,
+        "likes": 0,
+        "isOP": false,
+        "topics": [
+          "Google Play",
+          "苹果礼品卡",
+          "Visa/信用卡"
+        ],
+        "sentiment": "neutral"
+      },
+      {
+        "id": 168,
+        "author": "cyk9944",
+        "content": "Claude 太严了不搞了，chatgpt 我平时用香港或台湾节点，play 市场付款地区选这些地区也可以的吧？机场台湾也不知道是哪个地区，比如一会儿台北一会儿台南我也不知道，那是不是香港这种节点更好，不容易被风控",
+        "replyTo": null,
+        "likes": 0,
+        "isOP": false,
+        "topics": [
+          "封号风控",
+          "VPN/节点"
+        ],
+        "sentiment": "positive"
+      },
+      {
+        "id": 57,
+        "author": "asong",
+        "content": "我目前用的就是楼主的方案一，非常好使，也很稳。不过头几个月忘记改免税区，导致多收了几个月的税🤣（后面改成俄罗冈就 ok 了）。 另外，目前 Claude 很容易封号，是不是需不需要套一层美国住宅 IP",
+        "replyTo": null,
+        "likes": 0,
+        "isOP": false,
+        "topics": [
+          "封号风控",
+          "VPN/节点"
+        ],
+        "sentiment": "neutral"
+      },
+      {
+        "id": 133,
+        "author": "qiqw",
+        "content": "#32 老哥, 我已经让我朋友帮我注册, 并且开好 claude max 订阅了, 不过 我买的那个 IP 是美国纽约, 我那朋友的 IP 在马里兰州帮我订阅的, 如果我现在登录是不是有很大的可能被封",
+        "replyTo": "scf2024",
+        "likes": 0,
+        "isOP": false,
+        "topics": [
+          "封号风控",
+          "VPN/节点",
+          "Pro额度"
+        ],
         "sentiment": "neutral"
       }
     ],
     "opStats": {
-      "replyCount": 45,
-      "responseRate": 85,
-      "avgResponseTime": "\u226430min"
+      "replyCount": 59,
+      "responseRate": 47.9,
+      "avgResponseTime": "~2h"
     }
   }
 }
