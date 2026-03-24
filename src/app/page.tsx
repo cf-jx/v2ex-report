@@ -191,25 +191,72 @@ export default async function Home() {
       {/* ── 9. Footer ── */}
       <footer className="max-w-4xl mx-auto px-4 py-8">
         <hr className="rule-double mb-6" />
-        <div className="text-center space-y-2">
-          <p className="text-xs text-muted font-serif-cn">
-            数据来源:{" "}
+        <div className="text-center space-y-4">
+          {/* Author links */}
+          <div className="flex items-center justify-center gap-4 text-sm text-muted">
             <a
-              href={meta.url}
+              href="https://www.v2ex.com/member/scf2024"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-accent transition-colors"
+              className="hover:text-accent transition-colors"
+              aria-label="V2EX"
             >
-              V2EX 原帖
+              V2EX
             </a>
-          </p>
-          <p className="text-xs text-muted font-mono-data">
-            Last updated: {lastUpdated}
-          </p>
-          <p className="text-xs text-muted font-serif-cn">
-            The V2EX Chronicle &mdash; Generated with AI-powered analysis
-          </p>
-          <VisitorCounter />
+            <span className="text-border select-none" aria-hidden="true">·</span>
+            <a
+              href="https://x.com/websol241803"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+              aria-label="X (Twitter)"
+            >
+              𝕏
+            </a>
+            <span className="text-border select-none" aria-hidden="true">·</span>
+            <a
+              href="https://github.com/cf-jx"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+              aria-label="GitHub"
+            >
+              GitHub
+            </a>
+            <span className="text-border select-none" aria-hidden="true">·</span>
+            <a
+              href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=Z2hfYWJlNTc1ZTAwYThl#wechat_redirect"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+              aria-label="微信公众号"
+            >
+              公众号：布布ai
+            </a>
+          </div>
+
+          <hr className="rule-thin" />
+
+          <div className="space-y-2">
+            <p className="text-xs text-muted font-serif-cn">
+              数据来源:{" "}
+              <a
+                href={meta.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-accent transition-colors"
+              >
+                V2EX 原帖
+              </a>
+            </p>
+            <p className="text-xs text-muted font-mono-data">
+              Last updated: {lastUpdated}
+            </p>
+            <p className="text-xs text-muted font-serif-cn">
+              The V2EX Chronicle &mdash; Generated with AI-powered analysis
+            </p>
+            <VisitorCounter />
+          </div>
         </div>
       </footer>
     </div>
