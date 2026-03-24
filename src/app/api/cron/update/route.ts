@@ -3,6 +3,7 @@ import { writeFileSync } from "fs";
 import { join } from "path";
 import { scrapeV2EXPost } from "@/lib/scraper";
 import { analyzeComments } from "@/lib/analyzer";
+import { generateAllFAQs } from "@/lib/ai";
 import { revalidatePath } from "next/cache";
 
 export const runtime = "nodejs";
@@ -26,9 +27,26 @@ export async function GET(request: Request) {
     // Analyze
     const report = analyzeComments(raw);
 
-    // Write to data file
-    const dataPath = join(process.cwd(), "src", "data", "posts", `${POST_ID}.json`);
+    // Write report data
+    const dataDir = join(process.cwd(), "src", "data", "posts");
+    const dataPath = join(dataDir, `${POST_ID}.json`);
     writeFileSync(dataPath, JSON.stringify(report, null, 2), "utf-8");
+
+    // Generate AI FAQ summaries (if Doubao API is configured)
+    let faqCount = 0;
+    if (process.env.DOUBAO_API_KEY && process.env.DOUBAO_BASE_URL) {
+      try {
+        const faqs = await generateAllFAQs(report.comments, report.meta.title);
+        if (faqs.length > 0) {
+          const faqPath = join(dataDir, `${POST_ID}-faq.json`);
+          writeFileSync(faqPath, JSON.stringify(faqs, null, 2), "utf-8");
+          faqCount = faqs.length;
+        }
+      } catch (aiError) {
+        console.error("AI FAQ generation failed:", aiError);
+        // Non-fatal: keep existing FAQ data
+      }
+    }
 
     // Trigger ISR revalidation
     revalidatePath("/");
@@ -36,6 +54,7 @@ export async function GET(request: Request) {
     return NextResponse.json({
       success: true,
       commentsCount: report.comments.length,
+      faqCount,
       lastFetched: report.meta.lastFetched,
     });
   } catch (error) {

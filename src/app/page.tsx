@@ -134,24 +134,7 @@ export default async function Home() {
           </section>
         </ScrollReveal>
 
-        {/* ── 6. Hot Comments ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <h3 className="font-serif-cn text-xl font-bold mb-6 text-foreground">
-              精华评论
-            </h3>
-            <div className="space-y-4">
-              {hotComments.map((comment, i) => (
-                <ScrollReveal key={comment.id} delay={i * 0.08}>
-                  <HotCommentCard comment={comment} rank={i + 1} />
-                </ScrollReveal>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
-
-        {/* ── 7. FAQ Section ── */}
+        {/* ── 6. FAQ Section ── */}
         <ScrollReveal>
           <section>
             <hr className="rule-thin mb-4" />
@@ -165,6 +148,23 @@ export default async function Home() {
               {faqs.map((faq, i) => (
                 <ScrollReveal key={faq.id} delay={i * 0.08}>
                   <FAQCard faq={faq} index={i} />
+                </ScrollReveal>
+              ))}
+            </div>
+          </section>
+        </ScrollReveal>
+
+        {/* ── 7. Hot Comments ── */}
+        <ScrollReveal>
+          <section>
+            <hr className="rule-thin mb-4" />
+            <h3 className="font-serif-cn text-xl font-bold mb-6 text-foreground">
+              精华评论
+            </h3>
+            <div className="space-y-4">
+              {hotComments.map((comment, i) => (
+                <ScrollReveal key={comment.id} delay={i * 0.08}>
+                  <HotCommentCard comment={comment} rank={i + 1} />
                 </ScrollReveal>
               ))}
             </div>
