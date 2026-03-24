@@ -32,9 +32,9 @@ export async function GET(request: Request) {
     const dataPath = join(dataDir, `${POST_ID}.json`);
     writeFileSync(dataPath, JSON.stringify(report, null, 2), "utf-8");
 
-    // Generate AI FAQ summaries (if Doubao API is configured)
+    // Generate AI FAQ summaries (if AI API is configured)
     let faqCount = 0;
-    if (process.env.DOUBAO_API_KEY && process.env.DOUBAO_BASE_URL) {
+    if (process.env.AI_API_KEY && process.env.AI_BASE_URL) {
       try {
         const faqs = await generateAllFAQs(report.comments, report.meta.title);
         if (faqs.length > 0) {

@@ -9,6 +9,7 @@ import ScrollReveal from "@/components/interactive/ScrollReveal";
 import HotCommentCard from "@/components/cards/HotCommentCard";
 import FAQCard from "@/components/cards/FAQCard";
 import CommentList from "@/components/interactive/CommentList";
+import RegenerateFAQButton from "@/components/interactive/RegenerateFAQButton";
 
 const POST_ID = "1200385";
 
@@ -141,9 +142,12 @@ export default async function Home() {
             <h3 className="font-serif-cn text-xl font-bold mb-2 text-foreground">
               高频问题 AI 解读
             </h3>
-            <p className="text-sm text-muted font-serif-cn mb-6">
-              基于 {meta.replyCount} 条评论的智能分析
-            </p>
+            <div className="flex items-center justify-between mb-6">
+              <p className="text-sm text-muted font-serif-cn">
+                基于 {meta.replyCount} 条评论的智能分析
+              </p>
+              <RegenerateFAQButton />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {faqs.map((faq, i) => (
                 <ScrollReveal key={faq.id} delay={i * 0.08}>
