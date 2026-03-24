@@ -10,6 +10,7 @@ import HotCommentCard from "@/components/cards/HotCommentCard";
 import FAQCard from "@/components/cards/FAQCard";
 import CommentList from "@/components/interactive/CommentList";
 import RegenerateFAQButton from "@/components/interactive/RegenerateFAQButton";
+import VisitorCounter from "@/components/layout/VisitorCounter";
 
 const POST_ID = "1200385";
 
@@ -208,6 +209,7 @@ export default async function Home() {
           <p className="text-xs text-muted font-serif-cn">
             The V2EX Chronicle &mdash; Generated with AI-powered analysis
           </p>
+          <VisitorCounter />
         </div>
       </footer>
     </div>

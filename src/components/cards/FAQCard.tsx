@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, MessageSquareQuote, Sparkles } from "lucide-react";
 import type { FAQCard as FAQCardType } from "@/lib/types";
+import FAQVoteButtons from "./FAQVoteButtons";
 
 interface FAQCardProps {
   faq: FAQCardType;
@@ -65,6 +66,8 @@ export default function FAQCard({ faq, index }: FAQCardProps) {
             </p>
           </div>
         </div>
+
+        <FAQVoteButtons faqId={faq.id} />
       </div>
 
       {/* OP answer - collapsible */}
