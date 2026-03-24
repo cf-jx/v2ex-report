@@ -10,6 +10,7 @@ import HotCommentCard from "@/components/cards/HotCommentCard";
 import FAQCard from "@/components/cards/FAQCard";
 import CommentList from "@/components/interactive/CommentList";
 import AISummary from "@/components/interactive/AISummary";
+import LikeButton from "@/components/interactive/LikeButton";
 import VisitorCounter from "@/components/layout/VisitorCounter";
 
 const POST_ID = "1200385";
@@ -197,6 +198,11 @@ export default async function Home() {
       <footer className="max-w-4xl mx-auto px-4 py-8">
         <hr className="rule-double mb-6" />
         <div className="text-center space-y-4">
+          {/* Like button */}
+          <div className="flex justify-center pb-2">
+            <LikeButton />
+          </div>
+
           {/* Author links */}
           <div className="flex items-center justify-center gap-4 text-sm text-muted">
             <a
