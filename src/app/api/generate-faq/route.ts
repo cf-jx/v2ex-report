@@ -100,8 +100,8 @@ export async function POST(request: Request) {
       );
     }
 
-    // Save
-    const faqPath = join(dataDir, `${POST_ID}-faq.json`);
+    // Save to /tmp (writable on Vercel)
+    const faqPath = join("/tmp", `${POST_ID}-faq.json`);
     writeFileSync(faqPath, JSON.stringify(faqs, null, 2), "utf-8");
 
     // Revalidate page

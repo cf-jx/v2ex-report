@@ -27,9 +27,8 @@ export async function GET(request: Request) {
     // Analyze
     const report = analyzeComments(raw);
 
-    // Write report data
-    const dataDir = join(process.cwd(), "src", "data", "posts");
-    const dataPath = join(dataDir, `${POST_ID}.json`);
+    // Write report data to /tmp (Vercel filesystem is read-only)
+    const dataPath = join("/tmp", `${POST_ID}.json`);
     writeFileSync(dataPath, JSON.stringify(report, null, 2), "utf-8");
 
     // Generate AI FAQ summaries (if AI API is configured)
@@ -38,7 +37,7 @@ export async function GET(request: Request) {
       try {
         const faqs = await generateAllFAQs(report.comments, report.meta.title);
         if (faqs.length > 0) {
-          const faqPath = join(dataDir, `${POST_ID}-faq.json`);
+          const faqPath = join("/tmp", `${POST_ID}-faq.json`);
           writeFileSync(faqPath, JSON.stringify(faqs, null, 2), "utf-8");
           faqCount = faqs.length;
         }

@@ -5,7 +5,9 @@ import path from "path";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const VOTES_FILE = path.join(process.cwd(), "src/data/faq-votes.json");
+// Use /tmp on Vercel (read-only filesystem)
+const VOTES_FILE = path.join("/tmp", "faq-votes.json");
+const BUNDLED_VOTES = path.join(process.cwd(), "src/data/faq-votes.json");
 
 interface VoteRecord {
   up: number;
@@ -31,7 +33,12 @@ function readVotes(): VotesData {
     const raw = readFileSync(VOTES_FILE, "utf-8");
     return JSON.parse(raw) as VotesData;
   } catch {
-    return {};
+    try {
+      const raw = readFileSync(BUNDLED_VOTES, "utf-8");
+      return JSON.parse(raw) as VotesData;
+    } catch {
+      return {};
+    }
   }
 }
 

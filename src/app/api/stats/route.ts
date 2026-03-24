@@ -5,7 +5,9 @@ import path from "path";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const STATS_FILE = path.join(process.cwd(), "src/data/stats.json");
+// Use /tmp on Vercel (read-only filesystem), fallback to local in dev
+const STATS_FILE = path.join("/tmp", "stats.json");
+const BUNDLED_STATS = path.join(process.cwd(), "src/data/stats.json");
 
 interface StatsData {
   visitors: number;
@@ -17,7 +19,13 @@ function readStats(): StatsData {
     const raw = readFileSync(STATS_FILE, "utf-8");
     return JSON.parse(raw) as StatsData;
   } catch {
-    return { visitors: 0, lastReset: new Date().toISOString().slice(0, 10) };
+    // Try bundled stats as seed
+    try {
+      const raw = readFileSync(BUNDLED_STATS, "utf-8");
+      return JSON.parse(raw) as StatsData;
+    } catch {
+      return { visitors: 0, lastReset: new Date().toISOString().slice(0, 10) };
+    }
   }
 }
 

@@ -10,6 +10,20 @@ export const dynamic = "force-dynamic";
 
 const POST_ID = "1200385";
 
+// On Vercel, /tmp is the only writable directory
+function getSummaryPath(): string {
+  return join("/tmp", `${POST_ID}-summary.json`);
+}
+
+function getReportPath(): string {
+  return join(process.cwd(), "src", "data", "posts", `${POST_ID}.json`);
+}
+
+// Also check the bundled path (pre-generated summary shipped with the build)
+function getBundledSummaryPath(): string {
+  return join(process.cwd(), "src", "data", "posts", `${POST_ID}-summary.json`);
+}
+
 // Rate limiting: 1 per IP per 10 min, global cooldown 3 min
 const rateLimitMap = new Map<string, number>();
 const RATE_LIMIT_WINDOW = 10 * 60 * 1000;
@@ -27,7 +41,7 @@ function getClientIP(request: Request): string {
 export async function POST(request: Request) {
   if (!process.env.AI_API_KEY || !process.env.AI_BASE_URL) {
     return NextResponse.json(
-      { error: "AI service not configured", code: "NO_AI_CONFIG" },
+      { error: "AI 服务未配置，暂时无法生成总结", code: "NO_AI_CONFIG" },
       { status: 503 },
     );
   }
@@ -63,9 +77,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const dataDir = join(process.cwd(), "src", "data", "posts");
-    const reportPath = join(dataDir, `${POST_ID}.json`);
-    const report = JSON.parse(readFileSync(reportPath, "utf-8")) as V2EXReport;
+    const report = JSON.parse(readFileSync(getReportPath(), "utf-8")) as V2EXReport;
 
     const summary = await generateFullSummary(report.comments, report.meta.title);
 
@@ -76,13 +88,9 @@ export async function POST(request: Request) {
       );
     }
 
-    // Persist summary
-    const summaryPath = join(dataDir, `${POST_ID}-summary.json`);
-    writeFileSync(
-      summaryPath,
-      JSON.stringify({ summary, generatedAt: new Date().toISOString() }, null, 2),
-      "utf-8",
-    );
+    // Write to /tmp (writable on Vercel)
+    const payload = { summary, generatedAt: new Date().toISOString() };
+    writeFileSync(getSummaryPath(), JSON.stringify(payload, null, 2), "utf-8");
 
     revalidatePath("/");
 
@@ -95,14 +103,21 @@ export async function POST(request: Request) {
 
 export async function GET() {
   try {
-    const dataDir = join(process.cwd(), "src", "data", "posts");
-    const summaryPath = join(dataDir, `${POST_ID}-summary.json`);
+    // Try /tmp first (runtime-generated), then bundled (shipped with build)
+    const tmpPath = getSummaryPath();
+    const bundledPath = getBundledSummaryPath();
 
-    if (!existsSync(summaryPath)) {
+    const filePath = existsSync(tmpPath)
+      ? tmpPath
+      : existsSync(bundledPath)
+        ? bundledPath
+        : null;
+
+    if (!filePath) {
       return NextResponse.json({ summary: null });
     }
 
-    const data = JSON.parse(readFileSync(summaryPath, "utf-8"));
+    const data = JSON.parse(readFileSync(filePath, "utf-8"));
     return NextResponse.json(data);
   } catch {
     return NextResponse.json({ summary: null });
