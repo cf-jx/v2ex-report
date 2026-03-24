@@ -9,7 +9,7 @@ import ScrollReveal from "@/components/interactive/ScrollReveal";
 import HotCommentCard from "@/components/cards/HotCommentCard";
 import FAQCard from "@/components/cards/FAQCard";
 import CommentList from "@/components/interactive/CommentList";
-import RegenerateFAQButton from "@/components/interactive/RegenerateFAQButton";
+import AISummary from "@/components/interactive/AISummary";
 import VisitorCounter from "@/components/layout/VisitorCounter";
 
 const POST_ID = "1200385";
@@ -136,19 +136,24 @@ export default async function Home() {
           </section>
         </ScrollReveal>
 
-        {/* ── 6. FAQ Section ── */}
+        {/* ── 6. AI Full Summary ── */}
+        <ScrollReveal>
+          <section>
+            <hr className="rule-thin mb-4" />
+            <AISummary />
+          </section>
+        </ScrollReveal>
+
+        {/* ── 7. FAQ Section ── */}
         <ScrollReveal>
           <section>
             <hr className="rule-thin mb-4" />
             <h3 className="font-serif-cn text-xl font-bold mb-2 text-foreground">
               高频问题 AI 解读
             </h3>
-            <div className="flex items-center justify-between mb-6">
-              <p className="text-sm text-muted font-serif-cn">
-                基于 {meta.replyCount} 条评论的智能分析
-              </p>
-              <RegenerateFAQButton />
-            </div>
+            <p className="text-sm text-muted font-serif-cn mb-6">
+              基于 {meta.replyCount} 条评论的智能分析
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {faqs.map((faq, i) => (
                 <ScrollReveal key={faq.id} delay={i * 0.08}>
@@ -254,6 +259,9 @@ export default async function Home() {
             </p>
             <p className="text-xs text-muted font-serif-cn">
               The V2EX Chronicle &mdash; Generated with AI-powered analysis
+            </p>
+            <p className="text-xs text-muted font-serif-cn">
+              &copy; {new Date().getFullYear()} 布布ai. All rights reserved.
             </p>
             <VisitorCounter />
           </div>

@@ -123,6 +123,44 @@ export async function generateFAQSummary(
 }
 
 /**
+ * Generate a full summary of the OP's post and all comments
+ */
+export async function generateFullSummary(
+  comments: Comment[],
+  postTitle: string,
+): Promise<string> {
+  const opComments = comments.filter((c) => c.isOP);
+  const otherComments = comments.filter((c) => !c.isOP);
+
+  const opTexts = opComments
+    .map((c) => `#${c.id} [OP ${c.author}]: ${c.content}`)
+    .join("\n");
+
+  const otherTexts = otherComments
+    .slice(0, 100) // cap to avoid token overflow
+    .map((c) => `#${c.id} [${c.author}]: ${c.content}`)
+    .join("\n");
+
+  const response = await chatCompletion(
+    `你是一位资深的中文科技社区编辑。你需要对一篇V2EX帖子及其所有评论进行全面总结。
+要求：
+1. 用3-5个段落概括帖子的核心内容、讨论的主要观点、争议焦点以及社区共识
+2. 语言简洁有力，信息密度高，避免空话套话
+3. 适当引用有代表性的观点（不需要引号，融入行文即可）
+4. 最后一段给出你的编辑按语/总结性评价
+5. 直接输出纯文本，不要markdown标记，不要标题，段落之间用空行分隔`,
+    [
+      {
+        role: "user",
+        content: `帖子标题: ${postTitle}\n\nOP的全部发言（${opComments.length}条）:\n${opTexts}\n\n其他用户评论（共${otherComments.length}条，摘取前100条）:\n${otherTexts}\n\n请撰写全文总结。`,
+      },
+    ],
+  );
+
+  return response.trim();
+}
+
+/**
  * Full pipeline: extract topics + generate summaries for all FAQs
  */
 export async function generateAllFAQs(

@@ -25,8 +25,8 @@ export default function ReportHeader({
 
   return (
     <header className="relative w-full max-w-4xl mx-auto px-4 pt-8 pb-4">
-      {/* Theme toggle - fixed bottom right */}
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* Theme toggle - top right */}
+      <div className="absolute top-4 right-4 z-50">
         <ThemeToggle />
       </div>
 
