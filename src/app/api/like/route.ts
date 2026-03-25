@@ -1,32 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, existsSync } from "fs";
 import { join } from "path";
+import { saveLikes, loadLikes } from "@/lib/blob";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const LIKE_FILE = join("/tmp", "likes.json");
-const BUNDLED_LIKE = join(process.cwd(), "src/data/likes.json");
-
 interface LikeData {
   count: number;
-  ips: string[]; // deduplicate by IP
+  ips: string[];
 }
 
-function readLikes(): LikeData {
+const BUNDLED_LIKE = join(/*turbopackIgnore: true*/ process.cwd(), "src/data/likes.json");
+
+async function readLikes(postId: string): Promise<LikeData> {
+  // Try Blob first
   try {
-    return JSON.parse(readFileSync(LIKE_FILE, "utf-8")) as LikeData;
+    const blob = await loadLikes(postId);
+    if (blob) return blob;
   } catch {
+    // fall through
+  }
+
+  // Fallback to bundled (only for default post)
+  if (postId === "1200385" && existsSync(BUNDLED_LIKE)) {
     try {
       return JSON.parse(readFileSync(BUNDLED_LIKE, "utf-8")) as LikeData;
     } catch {
-      return { count: 0, ips: [] };
+      // fall through
     }
   }
-}
 
-function writeLikes(data: LikeData): void {
-  writeFileSync(LIKE_FILE, JSON.stringify(data, null, 2), "utf-8");
+  return { count: 0, ips: [] };
 }
 
 function getClientIP(request: NextRequest): string {
@@ -37,16 +42,17 @@ function getClientIP(request: NextRequest): string {
   );
 }
 
-export async function GET() {
-  const data = readLikes();
+export async function GET(request: NextRequest) {
+  const postId = request.nextUrl.searchParams.get("postId") || "1200385";
+  const data = await readLikes(postId);
   return NextResponse.json({ count: data.count });
 }
 
 export async function POST(request: NextRequest) {
+  const postId = request.nextUrl.searchParams.get("postId") || "1200385";
   const ip = getClientIP(request);
-  const data = readLikes();
+  const data = await readLikes(postId);
 
-  // Check if already liked
   if (data.ips.includes(ip)) {
     return NextResponse.json(
       { error: "Already liked", count: data.count, liked: true },
@@ -56,7 +62,7 @@ export async function POST(request: NextRequest) {
 
   data.count += 1;
   data.ips.push(ip);
-  writeLikes(data);
+  await saveLikes(postId, data);
 
   return NextResponse.json({ count: data.count, liked: true });
 }

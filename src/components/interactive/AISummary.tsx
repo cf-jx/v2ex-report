@@ -10,16 +10,15 @@ interface SummaryData {
   generatedAt?: string;
 }
 
-export default function AISummary() {
+export default function AISummary({ postId }: { postId: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [summary, setSummary] = useState<string | null>(null);
   const [generatedAt, setGeneratedAt] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState("");
   const [collapsed, setCollapsed] = useState(false);
 
-  // Load existing summary on mount
   useEffect(() => {
-    fetch("/api/generate-summary")
+    fetch(`/api/generate-summary?postId=${postId}`)
       .then((res) => res.json())
       .then((data: SummaryData) => {
         if (data.summary) {
@@ -28,10 +27,8 @@ export default function AISummary() {
           setStatus("loaded");
         }
       })
-      .catch(() => {
-        // No existing summary, that's fine
-      });
-  }, []);
+      .catch(() => {});
+  }, [postId]);
 
   const handleGenerate = async () => {
     if (status === "loading") return;
@@ -40,7 +37,11 @@ export default function AISummary() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("/api/generate-summary", { method: "POST" });
+      const res = await fetch("/api/generate-summary", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ postId }),
+      });
       const data = await res.json();
 
       if (res.ok && data.summary) {
@@ -77,7 +78,6 @@ export default function AISummary() {
 
   return (
     <div className="bg-card border border-border rounded-sm p-6 space-y-4">
-      {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Sparkles size={18} className="text-accent" />
@@ -110,7 +110,6 @@ export default function AISummary() {
         </div>
       </div>
 
-      {/* Content */}
       {summary ? (
         <div
           className={`space-y-3 overflow-hidden transition-all duration-300 ${
@@ -118,10 +117,7 @@ export default function AISummary() {
           }`}
         >
           {summary.split("\n\n").map((paragraph, i) => (
-            <p
-              key={i}
-              className="text-sm leading-relaxed text-foreground font-serif-cn"
-            >
+            <p key={i} className="text-sm leading-relaxed text-foreground font-serif-cn">
               {paragraph}
             </p>
           ))}
@@ -141,9 +137,7 @@ export default function AISummary() {
       ) : status === "error" || status === "cooldown" ? (
         <div className="flex flex-col items-center py-6 gap-3">
           <AlertCircle size={24} className="text-[var(--sentiment-negative)]" />
-          <p className="text-sm text-[var(--sentiment-negative)] font-serif-cn">
-            {errorMsg}
-          </p>
+          <p className="text-sm text-[var(--sentiment-negative)] font-serif-cn">{errorMsg}</p>
           {status === "error" && (
             <button
               onClick={handleGenerate}
@@ -157,7 +151,6 @@ export default function AISummary() {
           )}
         </div>
       ) : (
-        /* idle - no existing summary */
         <div className="flex flex-col items-center py-6 gap-3">
           <p className="text-sm text-muted font-serif-cn">
             基于 OP 全文与所有评论的智能总结

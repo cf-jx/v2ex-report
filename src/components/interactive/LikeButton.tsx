@@ -3,22 +3,22 @@
 import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
 
-export default function LikeButton() {
+export default function LikeButton({ postId }: { postId: string }) {
   const [count, setCount] = useState(0);
   const [liked, setLiked] = useState(false);
   const [animating, setAnimating] = useState(false);
 
+  const storageKey = `v2ex-report-liked-${postId}`;
+
   useEffect(() => {
-    // Check localStorage for previous like
-    if (localStorage.getItem("v2ex-report-liked") === "1") {
+    if (localStorage.getItem(storageKey) === "1") {
       setLiked(true);
     }
-    // Fetch current count
-    fetch("/api/like")
+    fetch(`/api/like?postId=${postId}`)
       .then((res) => res.json())
       .then((data) => setCount(data.count))
       .catch(() => {});
-  }, []);
+  }, [postId, storageKey]);
 
   const handleLike = async () => {
     if (liked) return;
@@ -27,13 +27,13 @@ export default function LikeButton() {
     setTimeout(() => setAnimating(false), 600);
 
     try {
-      const res = await fetch("/api/like", { method: "POST" });
+      const res = await fetch(`/api/like?postId=${postId}`, { method: "POST" });
       const data = await res.json();
 
       if (res.ok || res.status === 409) {
         setCount(data.count);
         setLiked(true);
-        localStorage.setItem("v2ex-report-liked", "1");
+        localStorage.setItem(storageKey, "1");
       }
     } catch {
       // Silently fail
@@ -63,12 +63,8 @@ export default function LikeButton() {
         `}
         style={animating ? { transform: "scale(1.3)", transition: "transform 0.3s ease" } : undefined}
       />
-      <span className="font-serif-cn">
-        {liked ? "已点赞" : "点赞"}
-      </span>
-      <span className="font-mono-data text-xs">
-        ({count})
-      </span>
+      <span className="font-serif-cn">{liked ? "已点赞" : "点赞"}</span>
+      <span className="font-mono-data text-xs">({count})</span>
     </button>
   );
 }

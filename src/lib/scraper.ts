@@ -144,32 +144,54 @@ function parseCommentsFromMarkdown(
   return comments;
 }
 
-export async function scrapeV2EXPost(postId: string): Promise<RawPostData> {
+/**
+ * Scrape a single page of a V2EX post.
+ * Page 1 returns metadata + comments; subsequent pages return comments only.
+ */
+export interface ScrapedPage {
+  meta?: {
+    title: string;
+    author: string;
+    viewCount: number;
+    favoriteCount: number;
+    replyCount: number;
+    totalPages: number;
+  };
+  comments: RawComment[];
+}
+
+export async function scrapeV2EXPage(
+  postId: string,
+  page: number,
+  commentStartId: number = 1,
+): Promise<ScrapedPage> {
   const baseUrl = `https://www.v2ex.com/t/${postId}`;
+  const url = page === 1 ? baseUrl : `${baseUrl}?p=${page}`;
+  const md = await fetchPage(url);
+  const comments = parseCommentsFromMarkdown(md, commentStartId);
 
-  // Fetch first page to get metadata
-  const page1 = await fetchPage(baseUrl);
-  const meta = parseMetaFromMarkdown(page1);
+  if (page === 1) {
+    const parsed = parseMetaFromMarkdown(md);
+    const totalPages = Math.max(Math.ceil(parsed.replyCount / 100), 1);
+    return { meta: { ...parsed, totalPages }, comments };
+  }
 
-  const allComments: RawComment[] = [];
+  return { comments };
+}
 
-  // Parse first page comments
-  const page1Comments = parseCommentsFromMarkdown(page1, 1);
-  allComments.push(...page1Comments);
+/**
+ * Scrape all pages of a V2EX post at once. Used by cron job.
+ */
+export async function scrapeV2EXPost(postId: string): Promise<RawPostData> {
+  const first = await scrapeV2EXPage(postId, 1);
+  const meta = first.meta!;
+  const allComments = [...first.comments];
 
-  // Determine total pages from reply count (V2EX shows ~100 replies per page)
-  const estimatedPages = Math.ceil(meta.replyCount / 100);
-
-  // Fetch remaining pages
-  for (let p = 2; p <= Math.max(estimatedPages, 2); p++) {
+  for (let p = 2; p <= meta.totalPages; p++) {
     try {
-      const pageContent = await fetchPage(`${baseUrl}?p=${p}`);
-      const pageComments = parseCommentsFromMarkdown(
-        pageContent,
-        allComments.length + 1,
-      );
-      if (pageComments.length === 0) break;
-      allComments.push(...pageComments);
+      const page = await scrapeV2EXPage(postId, p, allComments.length + 1);
+      if (page.comments.length === 0) break;
+      allComments.push(...page.comments);
     } catch {
       break;
     }
@@ -179,11 +201,11 @@ export async function scrapeV2EXPost(postId: string): Promise<RawPostData> {
     postId,
     title: meta.title,
     author: meta.author,
-    url: baseUrl,
+    url: `https://www.v2ex.com/t/${postId}`,
     viewCount: meta.viewCount,
     favoriteCount: meta.favoriteCount,
     replyCount: meta.replyCount || allComments.length,
-    totalPages: estimatedPages,
+    totalPages: meta.totalPages,
     comments: allComments,
   };
 }

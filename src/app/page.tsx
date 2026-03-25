@@ -1,17 +1,8 @@
-import { MessageCircle, Users, Reply, Bookmark } from "lucide-react";
+export const dynamic = "force-dynamic";
+
 import { getReportData, getFAQData } from "@/lib/data";
-import ReportHeader from "@/components/layout/ReportHeader";
-import StatCard from "@/components/cards/StatCard";
-import AnimatedBarChart from "@/components/charts/AnimatedBarChart";
-import AnimatedPieChart from "@/components/charts/AnimatedPieChart";
-import SentimentGauge from "@/components/charts/SentimentGauge";
-import ScrollReveal from "@/components/interactive/ScrollReveal";
-import HotCommentCard from "@/components/cards/HotCommentCard";
-import FAQCard from "@/components/cards/FAQCard";
-import CommentList from "@/components/interactive/CommentList";
-import AISummary from "@/components/interactive/AISummary";
-import LikeButton from "@/components/interactive/LikeButton";
-import VisitorCounter from "@/components/layout/VisitorCounter";
+import ReportView from "@/components/layout/ReportView";
+import URLInput from "@/components/interactive/URLInput";
 
 const POST_ID = "1200385";
 
@@ -21,258 +12,20 @@ export default async function Home() {
     getFAQData(POST_ID),
   ]);
 
-  const { meta, comments, analysis } = report;
-  const { sentimentBreakdown, topUsers, topicDistribution, hotComments, opStats } = analysis;
-
-  const uniqueCommenters = new Set(comments.map((c) => c.author)).size;
-
-  // Prepare top-10 users bar chart data, highlight OP with accent color
-  const top10Users = topUsers.slice(0, 10).map((u) => ({
-    label: u.name,
-    value: u.count,
-    color: u.isOP ? "var(--accent)" : undefined,
-    tag: u.isOP ? "OP" : undefined,
-  }));
-
-  // Prepare topic bar chart data
-  const topicBarData = topicDistribution.map((t) => ({
-    label: t.name,
-    value: t.count,
-    color: t.color,
-  }));
-
-  // Prepare sentiment pie chart data
-  const sentimentPieData = [
-    { label: "积极", value: sentimentBreakdown.positive, color: "var(--sentiment-positive)" },
-    { label: "中立", value: sentimentBreakdown.neutral, color: "var(--sentiment-neutral)" },
-    { label: "消极", value: sentimentBreakdown.negative, color: "var(--sentiment-negative)" },
-  ];
-
-  const lastUpdated = new Date(meta.lastFetched).toLocaleString("zh-CN", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-
   return (
     <div className="min-h-screen bg-background">
-      {/* ── 1. Header ── */}
-      <ReportHeader
-        title={meta.title}
-        subtitle={`作者: ${meta.author}`}
-        volume={1}
-        date={lastUpdated.split(" ")[0] ?? lastUpdated}
-        stats={{ replies: meta.replyCount, commenters: uniqueCommenters, views: meta.viewCount }}
-      />
+      {/* URL Input Bar */}
+      <div className="max-w-4xl mx-auto px-4 pt-4">
+        <URLInput />
+      </div>
 
-      <main className="max-w-4xl mx-auto px-4 pb-16 space-y-12">
-        {/* ── 2. Key Metrics Row ── */}
-        <ScrollReveal>
-          <section>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <StatCard
-                value={meta.replyCount}
-                label="总回复"
-                icon={<MessageCircle size={20} />}
-              />
-              <StatCard
-                value={topUsers.length}
-                label="活跃用户"
-                icon={<Users size={20} />}
-              />
-              <StatCard
-                value={opStats.responseRate}
-                label="OP 回复率 %"
-                icon={<Reply size={20} />}
-                precision={1}
-              />
-              <StatCard
-                value={meta.favoriteCount}
-                label="收藏"
-                icon={<Bookmark size={20} />}
-              />
-            </div>
-          </section>
-        </ScrollReveal>
-
-        {/* ── 3. Topic Distribution ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <h3 className="font-serif-cn text-xl font-bold mb-6 text-foreground">
-              话题分布
-            </h3>
-            <AnimatedBarChart data={topicBarData} />
-          </section>
-        </ScrollReveal>
-
-        {/* ── 4. Sentiment Analysis ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <h3 className="font-serif-cn text-xl font-bold mb-6 text-foreground">
-              情感分析
-            </h3>
-            <div className="space-y-8">
-              <SentimentGauge
-                positive={sentimentBreakdown.positive}
-                neutral={sentimentBreakdown.neutral}
-                negative={sentimentBreakdown.negative}
-              />
-              <AnimatedPieChart data={sentimentPieData} />
-            </div>
-          </section>
-        </ScrollReveal>
-
-        {/* ── 5. Active Users ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <h3 className="font-serif-cn text-xl font-bold mb-6 text-foreground">
-              活跃用户 TOP 10
-            </h3>
-            <AnimatedBarChart data={top10Users} />
-          </section>
-        </ScrollReveal>
-
-        {/* ── 6. AI Full Summary ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <AISummary />
-          </section>
-        </ScrollReveal>
-
-        {/* ── 7. FAQ Section ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <h3 className="font-serif-cn text-xl font-bold mb-2 text-foreground">
-              高频问题 AI 解读
-            </h3>
-            <p className="text-sm text-muted font-serif-cn mb-6">
-              基于 {meta.replyCount} 条评论的智能分析
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {faqs.map((faq, i) => (
-                <ScrollReveal key={faq.id} delay={i * 0.08}>
-                  <FAQCard faq={faq} index={i} />
-                </ScrollReveal>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
-
-        {/* ── 7. Hot Comments ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <h3 className="font-serif-cn text-xl font-bold mb-6 text-foreground">
-              精华评论
-            </h3>
-            <div className="space-y-4">
-              {hotComments.map((comment, i) => (
-                <ScrollReveal key={comment.id} delay={i * 0.08}>
-                  <HotCommentCard comment={comment} rank={i + 1} />
-                </ScrollReveal>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
-
-        {/* ── 8. All Comments Browser ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <h3 className="font-serif-cn text-xl font-bold mb-6 text-foreground">
-              全部评论
-            </h3>
-            <CommentList comments={comments} />
-          </section>
-        </ScrollReveal>
-      </main>
-
-      {/* ── 9. Footer ── */}
-      <footer className="max-w-4xl mx-auto px-4 py-8">
-        <hr className="rule-double mb-6" />
-        <div className="text-center space-y-4">
-          {/* Like button */}
-          <div className="flex justify-center pb-2">
-            <LikeButton />
-          </div>
-
-          {/* Author links */}
-          <div className="flex items-center justify-center gap-4 text-sm text-muted">
-            <a
-              href="https://www.v2ex.com/member/scf2024"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-              aria-label="V2EX"
-            >
-              V2EX
-            </a>
-            <span className="text-border select-none" aria-hidden="true">·</span>
-            <a
-              href="https://x.com/websol241803"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-              aria-label="X (Twitter)"
-            >
-              𝕏
-            </a>
-            <span className="text-border select-none" aria-hidden="true">·</span>
-            <a
-              href="https://github.com/cf-jx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-              aria-label="GitHub"
-            >
-              GitHub
-            </a>
-            <span className="text-border select-none" aria-hidden="true">·</span>
-            <a
-              href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=Z2hfYWJlNTc1ZTAwYThl#wechat_redirect"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent transition-colors"
-              aria-label="微信公众号"
-            >
-              公众号：布布ai
-            </a>
-          </div>
-
-          <hr className="rule-thin" />
-
-          <div className="space-y-2">
-            <p className="text-xs text-muted font-serif-cn">
-              数据来源:{" "}
-              <a
-                href={meta.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:text-accent transition-colors"
-              >
-                V2EX 原帖
-              </a>
-            </p>
-            <p className="text-xs text-muted font-mono-data">
-              Last updated: {lastUpdated}
-            </p>
-            <p className="text-xs text-muted font-serif-cn">
-              The V2EX Chronicle &mdash; Generated with AI-powered analysis
-            </p>
-            <p className="text-xs text-muted font-serif-cn">
-              &copy; {new Date().getFullYear()} 布布ai. All rights reserved.
-            </p>
-            <VisitorCounter />
-          </div>
+      {report ? (
+        <ReportView report={report} faqs={faqs} postId={POST_ID} />
+      ) : (
+        <div className="max-w-4xl mx-auto px-4 py-20 text-center text-muted">
+          <p className="font-serif-cn">Failed to load report data.</p>
         </div>
-      </footer>
+      )}
     </div>
   );
 }
