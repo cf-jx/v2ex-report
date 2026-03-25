@@ -196,7 +196,7 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
             <span className="text-border select-none" aria-hidden="true">·</span>
             <a href="https://github.com/cf-jx" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="GitHub">GitHub</a>
             <span className="text-border select-none" aria-hidden="true">·</span>
-            <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=Z2hfYWJlNTc1ZTAwYThl#wechat_redirect" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="微信公众号">公众号：布布ai</a>
+            <a href="https://mp.weixin.qq.com/s/eUlC-QDp4SR7AvSJqHutUw" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="微信公众号">公众号：布布的ai实验室</a>
           </div>
 
           <hr className="rule-thin" />
