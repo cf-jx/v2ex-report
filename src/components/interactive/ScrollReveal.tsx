@@ -9,28 +9,25 @@ interface ScrollRevealProps {
   delay?: number;
   /** Vertical offset in px */
   offsetY?: number;
-  /** Viewport margin for trigger detection */
-  margin?: string;
   className?: string;
 }
 
 export default function ScrollReveal({
   children,
   delay = 0,
-  offsetY = 20,
-  margin = "-60px",
+  offsetY = 12,
   className,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: margin as `${number}px` });
+  const isInView = useInView(ref, { once: true, margin: "-40px" });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: offsetY }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: offsetY }}
+      initial={{ opacity: 1, y: offsetY }}
+      animate={isInView ? { opacity: 1, y: 0 } : undefined}
       transition={{
-        duration: 0.6,
+        duration: 0.5,
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
