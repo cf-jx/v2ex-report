@@ -6,6 +6,7 @@ import {
   JetBrains_Mono,
 } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import ThemeToggle from "@/components/layout/ThemeToggle";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -76,6 +77,9 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange={false}
         >
+          <div className="fixed top-4 right-4 z-50">
+            <ThemeToggle />
+          </div>
           {children}
         </ThemeProvider>
       </body>

@@ -105,8 +105,16 @@ function parseCommentsFromMarkdown(
 
       // Next comment starts with ![Image ...
       if (line.startsWith("![Image")) break;
-      // Or pagination links
+      // Pagination links
       if (line.startsWith("[1]") || line.startsWith("[❮")) break;
+      // V2EX site footer
+      if (
+        /\*\*\[关于\]/.test(line) ||
+        /人在线\*\*/.test(line) ||
+        /World is powered by/.test(line) ||
+        /Do have faith in/.test(line) ||
+        /digitalocean\.com/.test(line)
+      ) break;
 
       const trimmed = line.trim();
       if (trimmed) {
@@ -118,7 +126,7 @@ function parseCommentsFromMarkdown(
           replyTo = mentionMatch[1];
         }
 
-        // Clean: remove @[user](link) and ![heart] patterns
+        // Clean: remove @[user](link), images, and markdown links
         const cleaned = trimmed
           .replace(
             /@\[\w+\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)\s*/g,
@@ -126,6 +134,8 @@ function parseCommentsFromMarkdown(
           )
           .replace(/!\[Image[^\]]*\]\([^)]*\)\s*/g, "")
           .replace(/!\[[^\]]*\]\([^)]*\)\s*/g, "")
+          // Convert [text](url) markdown links to just text
+          .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
           .trim();
 
         if (cleaned) contentLines.push(cleaned);
