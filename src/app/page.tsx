@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 import { getReportData, getFAQData } from "@/lib/data";
 import ReportView from "@/components/layout/ReportView";

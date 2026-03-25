@@ -11,6 +11,7 @@ import CommentList from "@/components/interactive/CommentList";
 import AISummary from "@/components/interactive/AISummary";
 import LikeButton from "@/components/interactive/LikeButton";
 import VisitorCounter from "@/components/layout/VisitorCounter";
+import StaleChecker from "@/components/interactive/StaleChecker";
 import type { V2EXReport, FAQCard as FAQCardType } from "@/lib/types";
 
 interface ReportViewProps {
@@ -54,6 +55,8 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
 
   return (
     <>
+      <StaleChecker postId={postId} lastFetched={meta.lastFetched} />
+
       {/* ── 1. Header ── */}
       <ReportHeader
         title={meta.title}
