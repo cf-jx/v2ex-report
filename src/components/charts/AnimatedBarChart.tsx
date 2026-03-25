@@ -41,7 +41,7 @@ export default function AnimatedBarChart({
         return (
           <div key={item.label} className="flex items-center gap-3">
             {/* Label */}
-            <span className="w-28 sm:w-36 text-right text-sm text-foreground truncate flex-shrink-0 font-serif-cn">
+            <span className="w-20 sm:w-36 text-right text-xs sm:text-sm text-foreground break-words leading-tight flex-shrink-0 font-serif-cn">
               {item.label}
             </span>
 

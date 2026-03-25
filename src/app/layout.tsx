@@ -34,9 +34,28 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = "https://v2ex-report.vercel.app";
+
 export const metadata: Metadata = {
   title: "The V2EX Chronicle",
-  description: "V2EX comment visualization report in newspaper editorial style",
+  description:
+    "V2EX 热门帖子评论可视化分析报告，包含情感分析、话题分布、活跃用户排行与 AI 摘要",
+  keywords: ["V2EX", "评论分析", "数据可视化", "AI 摘要", "情感分析"],
+  openGraph: {
+    title: "The V2EX Chronicle",
+    description:
+      "V2EX 热门帖子评论可视化分析报告，包含情感分析、话题分布、活跃用户排行与 AI 摘要",
+    url: siteUrl,
+    siteName: "The V2EX Chronicle",
+    locale: "zh_CN",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The V2EX Chronicle",
+    description:
+      "V2EX 热门帖子评论可视化分析报告，包含情感分析、话题分布与 AI 摘要",
+  },
 };
 
 export default function RootLayout({
