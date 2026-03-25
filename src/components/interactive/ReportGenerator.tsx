@@ -28,7 +28,7 @@ export default function ReportGenerator({ postId }: { postId: string }) {
 
     try {
       // Step 1: Scrape page 1 to get metadata
-      setProgress("Scraping page 1...");
+      setProgress("正在抓取第 1 页...");
       const p1Res = await fetch(
         `/api/scrape-page?postId=${postId}&page=1&startId=1`,
       );
@@ -42,7 +42,7 @@ export default function ReportGenerator({ postId }: { postId: string }) {
 
       // Step 2: Scrape remaining pages
       for (let page = 2; page <= meta.totalPages; page++) {
-        setProgress(`Scraping page ${page}/${meta.totalPages}...`);
+        setProgress(`正在抓取第 ${page}/${meta.totalPages} 页...`);
         const res = await fetch(
           `/api/scrape-page?postId=${postId}&page=${page}&startId=${allComments.length + 1}`,
         );
@@ -54,7 +54,7 @@ export default function ReportGenerator({ postId }: { postId: string }) {
 
       // Step 3: Analyze
       setStage("analyzing");
-      setProgress("Analyzing comments...");
+      setProgress("正在分析评论...");
       const analyzeRes = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -78,7 +78,7 @@ export default function ReportGenerator({ postId }: { postId: string }) {
 
       // Done — reload the page to show the report
       setStage("done");
-      setProgress("Report ready!");
+      setProgress("报告已生成！");
       router.refresh();
     } catch (err) {
       setStage("error");
@@ -89,10 +89,10 @@ export default function ReportGenerator({ postId }: { postId: string }) {
   return (
     <div className="max-w-xl mx-auto px-4 py-20 text-center space-y-6">
       <h1 className="font-serif-cn text-2xl font-bold text-foreground">
-        V2EX Post #{postId}
+        V2EX 帖子 #{postId}
       </h1>
       <p className="text-sm text-muted font-serif-cn">
-        No report found for this post. Click below to generate one.
+        尚未生成该帖子的分析报告，点击下方按钮开始生成。
       </p>
 
       {stage === "idle" && (
@@ -101,7 +101,7 @@ export default function ReportGenerator({ postId }: { postId: string }) {
           className="px-6 py-3 bg-accent text-white rounded-lg font-medium
                      hover:bg-accent/90 active:bg-accent/80 transition-colors"
         >
-          Generate Report
+          生成报告
         </button>
       )}
 
@@ -130,7 +130,7 @@ export default function ReportGenerator({ postId }: { postId: string }) {
             className="px-4 py-2 text-sm bg-accent text-white rounded-lg
                        hover:bg-accent/90 transition-colors"
           >
-            Retry
+            重试
           </button>
         </div>
       )}

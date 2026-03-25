@@ -16,7 +16,7 @@ export default function URLInput() {
 
     const postId = parseV2EXUrl(value);
     if (!postId) {
-      setError("Please enter a valid V2EX URL or post ID");
+      setError("请输入有效的 V2EX 链接或帖子 ID");
       return;
     }
 
@@ -37,7 +37,7 @@ export default function URLInput() {
             setValue(e.target.value);
             setError("");
           }}
-          placeholder="Paste a V2EX URL or post ID to analyze..."
+          placeholder="输入 V2EX 帖子链接或帖子 ID 进行分析..."
           className="w-full pl-9 pr-3 py-2 text-sm bg-surface border border-border rounded-lg
                      placeholder:text-muted/60 text-foreground
                      focus:outline-none focus:ring-1 focus:ring-accent/50 focus:border-accent/50
@@ -49,7 +49,7 @@ export default function URLInput() {
         className="px-4 py-2 text-sm font-medium bg-accent text-white rounded-lg
                    hover:bg-accent/90 active:bg-accent/80 transition-colors flex-shrink-0"
       >
-        Analyze
+        分析
       </button>
       {error && (
         <p className="absolute mt-12 text-xs text-red-500">{error}</p>
