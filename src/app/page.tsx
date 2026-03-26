@@ -1,8 +1,9 @@
-export const revalidate = 3600;
+export const revalidate = 60;
 
 import { getReportData, getFAQData } from "@/lib/data";
 import ReportView from "@/components/layout/ReportView";
 import URLInput from "@/components/interactive/URLInput";
+import HomeRealtimeProbe from "@/components/interactive/HomeRealtimeProbe";
 
 const POST_ID = "1200385";
 
@@ -14,6 +15,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-background">
+      <HomeRealtimeProbe postId={POST_ID} />
       {/* URL Input Bar */}
       <div className="max-w-4xl mx-auto px-4 pt-4">
         <URLInput />

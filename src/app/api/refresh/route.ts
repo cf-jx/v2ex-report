@@ -7,11 +7,23 @@ import { revalidatePath } from "next/cache";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const STALE_MS = 4 * 60 * 60 * 1000; // 4 hours
+const HOT_POST_ID = "1200385";
+const DEFAULT_STALE_MS = 4 * 60 * 60 * 1000; // 4 hours
+const HOT_STALE_MS = 5 * 60 * 1000; // 5 minutes
+const DEFAULT_POST_COOLDOWN_MS = 60 * 60 * 1000; // 1 hour
+const HOT_POST_COOLDOWN_MS = 5 * 60 * 1000; // 5 minutes
 
 // Rate limiting: 1/min per IP, 1/hour per postId
 const ipLimitMap = new Map<string, number>();
 const postLimitMap = new Map<string, number>();
+
+function getStaleWindow(postId: string): number {
+  return postId === HOT_POST_ID ? HOT_STALE_MS : DEFAULT_STALE_MS;
+}
+
+function getPostCooldown(postId: string): number {
+  return postId === HOT_POST_ID ? HOT_POST_COOLDOWN_MS : DEFAULT_POST_COOLDOWN_MS;
+}
 
 function getClientIP(request: Request): string {
   return (
@@ -22,7 +34,12 @@ function getClientIP(request: Request): string {
 }
 
 export async function POST(request: Request) {
-  const body = await request.json();
+  let body: { postId?: string };
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+  }
   const postId = body.postId as string;
 
   if (!postId || !/^\d+$/.test(postId)) {
@@ -40,7 +57,7 @@ export async function POST(request: Request) {
 
   // Per-postId cooldown
   const lastPost = postLimitMap.get(postId) || 0;
-  if (now - lastPost < 60 * 60 * 1000) {
+  if (now - lastPost < getPostCooldown(postId)) {
     return NextResponse.json({ fresh: true });
   }
 
@@ -49,7 +66,7 @@ export async function POST(request: Request) {
     const existing = await loadReport(postId);
     if (existing) {
       const fetched = new Date(existing.meta.lastFetched).getTime();
-      if (now - fetched < STALE_MS) {
+      if (now - fetched < getStaleWindow(postId)) {
         return NextResponse.json({ fresh: true });
       }
     }
