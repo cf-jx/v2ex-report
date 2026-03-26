@@ -30,15 +30,16 @@ export default function AnimatedPieChart({
   const circumference = 2 * Math.PI * radius;
   const center = size / 2;
 
-  // Calculate each segment's offset and length
-  let accumulated = 0;
-  const segments = data.map((slice) => {
+  // Calculate each segment's offset and length without mutable render-time state.
+  const segments = data.reduce<
+    Array<PieSlice & { pct: number; length: number; offset: number }>
+  >((acc, slice) => {
+    const offset = acc.length === 0 ? 0 : acc[acc.length - 1].offset + acc[acc.length - 1].length;
     const pct = total > 0 ? slice.value / total : 0;
     const length = pct * circumference;
-    const offset = accumulated;
-    accumulated += length;
-    return { ...slice, pct, length, offset };
-  });
+    acc.push({ ...slice, pct, length, offset });
+    return acc;
+  }, []);
 
   return (
     <div ref={ref} className="flex flex-col sm:flex-row items-center gap-6">

@@ -3,6 +3,7 @@ export const revalidate = 3600;
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getReportData, getFAQData } from "@/lib/data";
+import type { V2EXReport } from "@/lib/types";
 import ReportView from "@/components/layout/ReportView";
 import ReportGenerator from "@/components/interactive/ReportGenerator";
 
@@ -12,6 +13,13 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { postId } = await params;
+  if (!/^\d+$/.test(postId)) {
+    return {
+      title: "Not Found - The V2EX Chronicle",
+      description: "Invalid post ID",
+      robots: { index: false, follow: false },
+    };
+  }
   const report = await getReportData(postId);
 
   if (!report) {
@@ -43,10 +51,7 @@ export default async function PostReportPage({ params }: Props) {
     notFound();
   }
 
-  const [report, faqs] = await Promise.all([
-    getReportData(postId),
-    getFAQData(postId),
-  ]);
+  const report = await getReportData(postId);
 
   if (!report) {
     return (
@@ -58,7 +63,18 @@ export default async function PostReportPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-background">
-      <ReportView report={report} faqs={faqs} postId={postId} />
+      <ReportWithFAQ postId={postId} report={report} />
     </div>
   );
+}
+
+async function ReportWithFAQ({
+  postId,
+  report,
+}: {
+  postId: string;
+  report: V2EXReport;
+}) {
+  const faqs = await getFAQData(postId);
+  return <ReportView report={report} faqs={faqs} postId={postId} />;
 }

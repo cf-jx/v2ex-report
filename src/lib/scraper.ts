@@ -24,7 +24,7 @@ async function fetchPage(url: string): Promise<string> {
     headers: { Accept: "text/markdown" },
   });
   if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
-  return res.text();
+  return await res.text();
 }
 
 function parseMetaFromMarkdown(md: string): {
@@ -34,10 +34,12 @@ function parseMetaFromMarkdown(md: string): {
   favoriteCount: number;
   replyCount: number;
 } {
-  const titleMatch = md.match(
-    /^#\s+(.+?)(?:\s*-\s*V2EX)?$/m,
-  );
-  const title = titleMatch?.[1]?.trim() ?? "Unknown";
+  const markdownTitleMatch = md.match(/^#\s+(.+?)(?:\s*-\s*V2EX)?$/m);
+  const frontMatterTitleMatch = md.match(/^Title:\s+(.+?)(?:\s*-\s*V2EX)?$/m);
+  const title =
+    markdownTitleMatch?.[1]?.trim() ??
+    frontMatterTitleMatch?.[1]?.trim() ??
+    "Unknown";
 
   const authorMatch =
     md.match(/\[(\w+)\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)\s*·/) ||

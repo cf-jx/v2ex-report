@@ -46,7 +46,10 @@ export default function ReportGenerator({ postId }: { postId: string }) {
         const res = await fetch(
           `/api/scrape-page?postId=${postId}&page=${page}&startId=${allComments.length + 1}`,
         );
-        if (!res.ok) break;
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || `Failed to scrape page ${page}`);
+        }
         const data = await res.json();
         if (!data.comments?.length) break;
         allComments.push(...data.comments);
