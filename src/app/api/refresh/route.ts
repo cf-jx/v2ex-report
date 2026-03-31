@@ -15,19 +15,10 @@ const REFRESH_LOCK_MS = 45 * 1000;
 
 // Keep a short-lived in-flight lock so multiple visitors do not stampede
 // the same refresh job while still allowing stale data to recover quickly.
-const ipLimitMap = new Map<string, number>();
 const postRefreshLockMap = new Map<string, number>();
 
 function getStaleWindow(postId: string): number {
   return postId === HOT_POST_ID ? HOT_STALE_MS : DEFAULT_STALE_MS;
-}
-
-function getClientIP(request: Request): string {
-  return (
-    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    request.headers.get("x-real-ip") ||
-    "unknown"
-  );
 }
 
 export async function POST(request: Request) {
@@ -44,7 +35,6 @@ export async function POST(request: Request) {
   }
 
   const now = Date.now();
-  const ip = getClientIP(request);
   const staleWindow = getStaleWindow(postId);
 
   let isStale = true;
@@ -63,17 +53,11 @@ export async function POST(request: Request) {
     return NextResponse.json({ fresh: true });
   }
 
-  const lastIp = ipLimitMap.get(ip) || 0;
-  if (now - lastIp < 10_000) {
-    return NextResponse.json({ throttled: true, fresh: false });
-  }
-
   const lockedAt = postRefreshLockMap.get(postId) || 0;
   if (now - lockedAt < REFRESH_LOCK_MS) {
     return NextResponse.json({ refreshing: true, fresh: false });
   }
 
-  ipLimitMap.set(ip, now);
   postRefreshLockMap.set(postId, now);
 
   try {
