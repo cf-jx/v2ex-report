@@ -175,7 +175,7 @@ export function layoutColumnFlow(
   const cursor =
     options.startCursor ?? ({
       segmentIndex: 0,
-      graphemeIndex: 1,
+      graphemeIndex: 0,
     } as const);
 
   let currentCursor = cursor;
