@@ -23,6 +23,7 @@ export async function saveReport(postId: string, data: V2EXReport) {
   await put(reportKey(postId), JSON.stringify(data), {
     access: "public",
     addRandomSuffix: false,
+    allowOverwrite: true,
     contentType: "application/json",
   });
 }
@@ -31,6 +32,7 @@ export async function saveFAQ(postId: string, data: FAQCard[]) {
   await put(faqKey(postId), JSON.stringify(data), {
     access: "public",
     addRandomSuffix: false,
+    allowOverwrite: true,
     contentType: "application/json",
   });
 }
@@ -39,6 +41,7 @@ export async function saveSummary(postId: string, data: string) {
   await put(summaryKey(postId), JSON.stringify({ summary: data }), {
     access: "public",
     addRandomSuffix: false,
+    allowOverwrite: true,
     contentType: "application/json",
   });
 }
@@ -50,6 +53,7 @@ export async function saveLikes(
   await put(likesKey(postId), JSON.stringify(data), {
     access: "public",
     addRandomSuffix: false,
+    allowOverwrite: true,
     contentType: "application/json",
   });
 }
