@@ -8,10 +8,11 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const HOT_POST_ID = "1200385";
-const DEFAULT_STALE_MS = 4 * 60 * 60 * 1000; // 4 hours
-const HOT_STALE_MS = 5 * 60 * 1000; // 5 minutes
-const DEFAULT_POST_COOLDOWN_MS = 60 * 60 * 1000; // 1 hour
-const HOT_POST_COOLDOWN_MS = 5 * 60 * 1000; // 5 minutes
+const ONE_MINUTE_MS = 60 * 1000;
+const DEFAULT_STALE_MS = ONE_MINUTE_MS;
+const HOT_STALE_MS = ONE_MINUTE_MS;
+const DEFAULT_POST_COOLDOWN_MS = ONE_MINUTE_MS;
+const HOT_POST_COOLDOWN_MS = ONE_MINUTE_MS;
 
 // Rate limiting: 1/min per IP, 1/hour per postId
 const ipLimitMap = new Map<string, number>();

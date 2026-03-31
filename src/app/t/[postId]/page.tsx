@@ -6,6 +6,7 @@ import { getReportData, getFAQData } from "@/lib/data";
 import type { V2EXReport } from "@/lib/types";
 import ReportView from "@/components/layout/ReportView";
 import ReportGenerator from "@/components/interactive/ReportGenerator";
+import HomeRealtimeProbe from "@/components/interactive/HomeRealtimeProbe";
 
 interface Props {
   params: Promise<{ postId: string }>;
@@ -63,6 +64,7 @@ export default async function PostReportPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-background">
+      <HomeRealtimeProbe postId={postId} />
       <ReportWithFAQ postId={postId} report={report} />
     </div>
   );
