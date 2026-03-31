@@ -11,19 +11,15 @@ const HOT_POST_ID = "1200385";
 const ONE_MINUTE_MS = 60 * 1000;
 const DEFAULT_STALE_MS = ONE_MINUTE_MS;
 const HOT_STALE_MS = ONE_MINUTE_MS;
-const DEFAULT_POST_COOLDOWN_MS = ONE_MINUTE_MS;
-const HOT_POST_COOLDOWN_MS = ONE_MINUTE_MS;
+const REFRESH_LOCK_MS = 45 * 1000;
 
-// Rate limiting: 1/min per IP, 1/hour per postId
+// Keep a short-lived in-flight lock so multiple visitors do not stampede
+// the same refresh job while still allowing stale data to recover quickly.
 const ipLimitMap = new Map<string, number>();
-const postLimitMap = new Map<string, number>();
+const postRefreshLockMap = new Map<string, number>();
 
 function getStaleWindow(postId: string): number {
   return postId === HOT_POST_ID ? HOT_STALE_MS : DEFAULT_STALE_MS;
-}
-
-function getPostCooldown(postId: string): number {
-  return postId === HOT_POST_ID ? HOT_POST_COOLDOWN_MS : DEFAULT_POST_COOLDOWN_MS;
 }
 
 function getClientIP(request: Request): string {
@@ -49,34 +45,36 @@ export async function POST(request: Request) {
 
   const now = Date.now();
   const ip = getClientIP(request);
+  const staleWindow = getStaleWindow(postId);
 
-  // Per-IP rate limit
-  const lastIp = ipLimitMap.get(ip) || 0;
-  if (now - lastIp < 60_000) {
-    return NextResponse.json({ fresh: true });
-  }
+  let isStale = true;
 
-  // Per-postId cooldown
-  const lastPost = postLimitMap.get(postId) || 0;
-  if (now - lastPost < getPostCooldown(postId)) {
-    return NextResponse.json({ fresh: true });
-  }
-
-  // Check if data is actually stale
   try {
     const existing = await loadReport(postId);
     if (existing) {
       const fetched = new Date(existing.meta.lastFetched).getTime();
-      if (now - fetched < getStaleWindow(postId)) {
-        return NextResponse.json({ fresh: true });
-      }
+      isStale = now - fetched >= staleWindow;
     }
   } catch {
-    // No existing data or blob error — proceed with refresh
+    // No existing data or blob error — treat as stale and proceed
+  }
+
+  if (!isStale) {
+    return NextResponse.json({ fresh: true });
+  }
+
+  const lastIp = ipLimitMap.get(ip) || 0;
+  if (now - lastIp < 10_000) {
+    return NextResponse.json({ throttled: true, fresh: false });
+  }
+
+  const lockedAt = postRefreshLockMap.get(postId) || 0;
+  if (now - lockedAt < REFRESH_LOCK_MS) {
+    return NextResponse.json({ refreshing: true, fresh: false });
   }
 
   ipLimitMap.set(ip, now);
-  postLimitMap.set(postId, now);
+  postRefreshLockMap.set(postId, now);
 
   try {
     // Only scrape page 1 to stay within 10s timeout
@@ -117,5 +115,7 @@ export async function POST(request: Request) {
   } catch (error) {
     const message = error instanceof Error ? error.message : "Refresh failed";
     return NextResponse.json({ error: message }, { status: 500 });
+  } finally {
+    postRefreshLockMap.delete(postId);
   }
 }
