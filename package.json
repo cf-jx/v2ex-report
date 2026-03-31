@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@chenglou/pretext": "^0.0.3",
     "@vercel/blob": "^2.3.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.0.1",

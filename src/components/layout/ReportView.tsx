@@ -12,6 +12,7 @@ import AISummary from "@/components/interactive/AISummary";
 import LikeButton from "@/components/interactive/LikeButton";
 import VisitorCounter from "@/components/layout/VisitorCounter";
 import StaleChecker from "@/components/interactive/StaleChecker";
+import Link from "next/link";
 import type { V2EXReport, FAQCard as FAQCardType } from "@/lib/types";
 
 interface ReportViewProps {
@@ -208,6 +209,15 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
             <p className="text-xs text-muted font-serif-cn">
               数据来源:{" "}
               <a href={meta.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-accent transition-colors">V2EX 原帖</a>
+            </p>
+            <p className="text-xs text-muted font-serif-cn">
+              海报导出:{" "}
+              <Link
+                href={`/t/${postId}/poster`}
+                className="underline underline-offset-2 hover:text-accent transition-colors"
+              >
+                打开 pretext 海报页
+              </Link>
             </p>
             <p className="text-xs text-muted font-mono-data">Last updated: {lastUpdated}</p>
             <p className="text-xs text-muted font-serif-cn">The V2EX Chronicle &mdash; Generated with AI-powered analysis</p>
