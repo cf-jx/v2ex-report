@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { parseV2EXUrl } from "@/lib/url";
 
+const PUBLISHED_POST_IDS = new Set(["1200385"]);
+
 export default function URLInput() {
   const [value, setValue] = useState("");
   const [error, setError] = useState("");
@@ -17,6 +19,11 @@ export default function URLInput() {
     const postId = parseV2EXUrl(value);
     if (!postId) {
       setError("请输入有效的 V2EX 链接或帖子 ID");
+      return;
+    }
+
+    if (!PUBLISHED_POST_IDS.has(postId)) {
+      setError("该帖子尚未发布分析报告");
       return;
     }
 

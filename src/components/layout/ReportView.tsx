@@ -1,4 +1,6 @@
-import { MessageCircle, Users, Reply, Bookmark } from "lucide-react";
+"use client";
+
+import { MessageCircle, Users, Reply } from "lucide-react";
 import ReportHeader from "@/components/layout/ReportHeader";
 import StatCard from "@/components/cards/StatCard";
 import AnimatedBarChart from "@/components/charts/AnimatedBarChart";
@@ -8,10 +10,6 @@ import ScrollReveal from "@/components/interactive/ScrollReveal";
 import HotCommentCard from "@/components/cards/HotCommentCard";
 import FAQCard from "@/components/cards/FAQCard";
 import CommentList from "@/components/interactive/CommentList";
-import AISummary from "@/components/interactive/AISummary";
-import LikeButton from "@/components/interactive/LikeButton";
-import VisitorCounter from "@/components/layout/VisitorCounter";
-import StaleChecker from "@/components/interactive/StaleChecker";
 import Link from "next/link";
 import type { V2EXReport, FAQCard as FAQCardType } from "@/lib/types";
 
@@ -56,8 +54,6 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
 
   return (
     <>
-      <StaleChecker postId={postId} lastFetched={meta.lastFetched} />
-
       {/* ── 1. Header ── */}
       <ReportHeader
         title={meta.title}
@@ -69,31 +65,32 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
 
       <main className="max-w-4xl mx-auto px-4 pb-16 space-y-12">
         {/* ── 1.5 Post Summary ── */}
-        <section className="bg-surface/50 border border-border rounded-lg px-5 py-4">
-          <h2 className="font-serif-cn text-base font-bold text-foreground mb-1">
-            帖子简介
-          </h2>
-          <p className="text-sm text-muted font-serif-cn leading-relaxed">
-            {meta.title}
-          </p>
-          <a
-            href={meta.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-2 text-xs text-accent hover:underline underline-offset-2 transition-colors"
-          >
-            查看原帖 &rarr;
-          </a>
+        <section className="rounded-lg border border-border bg-surface/50 px-5 py-4">
+          <div>
+            <h2 className="font-serif-cn text-base font-bold text-foreground mb-1">
+              帖子简介
+            </h2>
+            <p className="text-sm text-muted font-serif-cn leading-relaxed">
+              {meta.title}
+            </p>
+            <a
+              href={meta.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-2 text-xs text-accent hover:underline underline-offset-2 transition-colors"
+            >
+              查看原帖 &rarr;
+            </a>
+          </div>
         </section>
 
         {/* ── 2. Key Metrics Row ── */}
         <ScrollReveal>
           <section>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <StatCard value={meta.replyCount} label="总回复" icon={<MessageCircle size={20} />} />
               <StatCard value={topUsers.length} label="活跃用户" icon={<Users size={20} />} />
               <StatCard value={opStats.responseRate} label="OP 回复率 %" icon={<Reply size={20} />} precision={1} />
-              <StatCard value={meta.favoriteCount} label="收藏" icon={<Bookmark size={20} />} />
             </div>
           </section>
         </ScrollReveal>
@@ -132,22 +129,14 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
           </section>
         </ScrollReveal>
 
-        {/* ── 6. AI Full Summary ── */}
-        <ScrollReveal>
-          <section>
-            <hr className="rule-thin mb-4" />
-            <AISummary postId={postId} />
-          </section>
-        </ScrollReveal>
-
-        {/* ── 7. FAQ Section ── */}
+        {/* ── 6. FAQ Section ── */}
         {faqs.length > 0 && (
           <ScrollReveal>
             <section>
               <hr className="rule-thin mb-4" />
               <h3 className="font-serif-cn text-xl font-bold mb-2 text-foreground">高频问题 AI 解读</h3>
               <p className="text-sm text-muted font-serif-cn mb-6">
-                基于 {meta.replyCount} 条评论的智能分析
+                历史快照的智能分析；基础评论数据每小时自动更新
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {faqs.map((faq, i) => (
@@ -160,7 +149,7 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
           </ScrollReveal>
         )}
 
-        {/* ── 8. Hot Comments ── */}
+        {/* ── 7. Hot Comments ── */}
         <ScrollReveal>
           <section>
             <hr className="rule-thin mb-4" />
@@ -175,7 +164,7 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
           </section>
         </ScrollReveal>
 
-        {/* ── 9. All Comments Browser ── */}
+        {/* ── 8. All Comments Browser ── */}
         <ScrollReveal>
           <section>
             <hr className="rule-thin mb-4" />
@@ -185,14 +174,10 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
         </ScrollReveal>
       </main>
 
-      {/* ── 10. Footer ── */}
+      {/* ── 9. Footer ── */}
       <footer className="max-w-4xl mx-auto px-4 py-8">
         <hr className="rule-double mb-6" />
         <div className="text-center space-y-4">
-          <div className="flex justify-center pb-2">
-            <LikeButton postId={postId} />
-          </div>
-
           <div className="flex items-center justify-center gap-4 text-sm text-muted">
             <a href="https://www.v2ex.com/member/scf2024" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="V2EX">V2EX</a>
             <span className="text-border select-none" aria-hidden="true">·</span>
@@ -222,7 +207,6 @@ export default function ReportView({ report, faqs, postId }: ReportViewProps) {
             <p className="text-xs text-muted font-mono-data">Last updated: {lastUpdated}</p>
             <p className="text-xs text-muted font-serif-cn">The V2EX Chronicle &mdash; Generated with AI-powered analysis</p>
             <p className="text-xs text-muted font-serif-cn">&copy; {new Date().getFullYear()} 布布ai. All rights reserved.</p>
-            <VisitorCounter />
           </div>
         </div>
       </footer>

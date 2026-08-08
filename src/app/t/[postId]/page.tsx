@@ -1,15 +1,17 @@
-export const revalidate = 3600;
-
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { staticPostIds } from "@/data/reports";
 import { getReportData, getFAQData } from "@/lib/data";
-import type { V2EXReport } from "@/lib/types";
-import ReportView from "@/components/layout/ReportView";
-import ReportGenerator from "@/components/interactive/ReportGenerator";
-import HomeRealtimeProbe from "@/components/interactive/HomeRealtimeProbe";
+import LiveReportView from "@/components/interactive/LiveReportView";
 
 interface Props {
   params: Promise<{ postId: string }>;
+}
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return staticPostIds.map((postId) => ({ postId }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -25,8 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!report) {
     return {
-      title: `Generating Report - The V2EX Chronicle`,
-      description: `V2EX post #${postId} analysis report`,
+      title: "Not Found - The V2EX Chronicle",
+      description: "Report not found",
+      robots: { index: false, follow: false },
     };
   }
 
@@ -52,31 +55,18 @@ export default async function PostReportPage({ params }: Props) {
     notFound();
   }
 
-  const report = await getReportData(postId);
+  const [report, faqs] = await Promise.all([
+    getReportData(postId),
+    getFAQData(postId),
+  ]);
 
   if (!report) {
-    return (
-      <div className="min-h-screen bg-background">
-        <ReportGenerator postId={postId} />
-      </div>
-    );
+    notFound();
   }
 
   return (
     <div className="min-h-screen bg-background">
-      <HomeRealtimeProbe postId={postId} />
-      <ReportWithFAQ postId={postId} report={report} />
+      <LiveReportView report={report} faqs={faqs} postId={postId} />
     </div>
   );
-}
-
-async function ReportWithFAQ({
-  postId,
-  report,
-}: {
-  postId: string;
-  report: V2EXReport;
-}) {
-  const faqs = await getFAQData(postId);
-  return <ReportView report={report} faqs={faqs} postId={postId} />;
 }
