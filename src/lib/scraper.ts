@@ -11,213 +11,131 @@ export interface RawPostData {
   author: string;
   url: string;
   viewCount: number;
-  favoriteCount: number;
   replyCount: number;
   totalPages: number;
   comments: RawComment[];
 }
 
-const JINA_PREFIX = "https://r.jina.ai/";
-
-async function fetchPage(url: string): Promise<string> {
-  const res = await fetch(`${JINA_PREFIX}${url}`, {
-    headers: { Accept: "text/markdown" },
-  });
-  if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
-  return await res.text();
-}
-
-function parseMetaFromMarkdown(md: string): {
+interface V2EXTopic {
+  id: number;
   title: string;
-  author: string;
-  viewCount: number;
-  favoriteCount: number;
-  replyCount: number;
-} {
-  const markdownTitleMatch = md.match(/^#\s+(.+?)(?:\s*-\s*V2EX)?$/m);
-  const frontMatterTitleMatch = md.match(/^Title:\s+(.+?)(?:\s*-\s*V2EX)?$/m);
-  const title =
-    markdownTitleMatch?.[1]?.trim() ??
-    frontMatterTitleMatch?.[1]?.trim() ??
-    "Unknown";
-
-  const authorMatch =
-    md.match(/\[(\w+)\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)\s*·/) ||
-    md.match(/\*\*(\w+)\*\*\s*·/);
-  const author = authorMatch?.[1] ?? "unknown";
-
-  const viewMatch = md.match(/([\d,]+)\s*次点击/);
-  const viewCount = viewMatch
-    ? parseInt(viewMatch[1].replace(/,/g, ""), 10)
-    : 0;
-
-  const favMatch = md.match(/([\d,]+)\s*人收藏/);
-  const favoriteCount = favMatch
-    ? parseInt(favMatch[1].replace(/,/g, ""), 10)
-    : 0;
-
-  const replyMatch = md.match(/([\d,]+)\s*条回复/);
-  const replyCount = replyMatch
-    ? parseInt(replyMatch[1].replace(/,/g, ""), 10)
-    : 0;
-
-  return { title, author, viewCount, favoriteCount, replyCount };
+  url: string;
+  replies: number;
+  deleted?: number;
+  member: { username: string } | null;
 }
 
-function parseCommentsFromMarkdown(
-  md: string,
-  startId: number,
-): RawComment[] {
-  const comments: RawComment[] = [];
-  const lines = md.split("\n");
-  let id = startId;
+interface V2EXReply {
+  id: number;
+  topic_id: number;
+  content: string;
+  member: { username: string } | null;
+}
 
-  for (let i = 0; i < lines.length; i++) {
-    // Look for: **[username](https://www.v2ex.com/member/username)**<timestamp>
-    const userLineMatch = lines[i].match(
-      /^\*\*\[(\w+)\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)\*\*/,
+const V2EX_ORIGIN = "https://www.v2ex.com";
+const MAX_REPLIES = 1_000;
+
+async function fetchJSON<T>(url: string): Promise<T> {
+  const response = await fetch(url, {
+    headers: {
+      Accept: "application/json",
+      "Cache-Control": "no-cache",
+      "User-Agent": "V2EX-Report/1.0 (+https://github.com/cf-jx/v2ex-report)",
+    },
+  });
+
+  if (!response.ok) {
+    const responseText = await response.text();
+    console.warn("V2EX API request rejected", {
+      path: new URL(url).pathname,
+      status: response.status,
+      response: responseText.slice(0, 300),
+    });
+    const diagnostic = responseText
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 160);
+    throw new Error(
+      `V2EX API request failed with status ${response.status}${diagnostic ? `: ${diagnostic}` : ""}`,
     );
-    if (!userLineMatch) continue;
-
-    const author = userLineMatch[1];
-
-    // Skip optional "OP" and timestamp lines
-    let j = i + 1;
-    while (j < lines.length) {
-      const trimmed = lines[j].trim();
-      if (
-        trimmed === "" ||
-        trimmed === "OP" ||
-        /^\d+\s*(天|小时|分钟|秒)/.test(trimmed) ||
-        /^via\s+(Android|iPhone)/i.test(trimmed) ||
-        /天前/.test(trimmed)
-      ) {
-        j++;
-      } else {
-        break;
-      }
-    }
-
-    // Collect content lines until next image block (avatar of next comment)
-    const contentLines: string[] = [];
-    let replyTo: string | null = null;
-
-    while (j < lines.length) {
-      const line = lines[j];
-
-      // Next comment starts with ![Image ...
-      if (line.startsWith("![Image")) break;
-      // Pagination links
-      if (line.startsWith("[1]") || line.startsWith("[❮")) break;
-      // V2EX site footer
-      if (
-        /\*\*\[关于\]/.test(line) ||
-        /人在线\*\*/.test(line) ||
-        /World is powered by/.test(line) ||
-        /Do have faith in/.test(line) ||
-        /digitalocean\.com/.test(line)
-      ) break;
-
-      const trimmed = line.trim();
-      if (trimmed) {
-        // Extract @mention
-        const mentionMatch = trimmed.match(
-          /@\[(\w+)\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)/,
-        );
-        if (mentionMatch && !replyTo) {
-          replyTo = mentionMatch[1];
-        }
-
-        // Clean: remove @[user](link), images, and markdown links
-        const cleaned = trimmed
-          .replace(
-            /@\[\w+\]\(https?:\/\/www\.v2ex\.com\/member\/\w+\)\s*/g,
-            "",
-          )
-          .replace(/!\[Image[^\]]*\]\([^)]*\)\s*/g, "")
-          .replace(/!\[[^\]]*\]\([^)]*\)\s*/g, "")
-          // Convert [text](url) markdown links to just text
-          .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
-          .trim();
-
-        if (cleaned) contentLines.push(cleaned);
-      }
-      j++;
-    }
-
-    const content = contentLines.join(" ").trim();
-    if (content) {
-      comments.push({ id: id++, author, content, replyTo });
-    }
-
-    // Don't skip i forward — the for loop will continue scanning
   }
 
-  return comments;
+  return (await response.json()) as T;
 }
 
-/**
- * Scrape a single page of a V2EX post.
- * Page 1 returns metadata + comments; subsequent pages return comments only.
- */
-export interface ScrapedPage {
-  meta?: {
-    title: string;
-    author: string;
-    viewCount: number;
-    favoriteCount: number;
-    replyCount: number;
-    totalPages: number;
+async function fetchViewCount(postId: string, cacheBucket: number): Promise<number> {
+  const response = await fetch(
+    `${V2EX_ORIGIN}/t/${postId}?v2ex_report_cache=${cacheBucket}`,
+    {
+      headers: {
+        Accept: "text/html",
+        "Cache-Control": "no-cache",
+        "User-Agent": "V2EX-Report/1.0 (+https://github.com/cf-jx/v2ex-report)",
+      },
+    },
+  );
+  if (!response.ok) {
+    throw new Error(`V2EX post page request failed with status ${response.status}`);
+  }
+
+  const html = await response.text();
+  const match = html.match(/([\d,]+)\s+views<\/small>/i);
+  if (!match) throw new Error("V2EX view count was not found in the post page");
+
+  return Number.parseInt(match[1].replaceAll(",", ""), 10);
+}
+
+function normalizeReply(reply: V2EXReply, index: number): RawComment {
+  const rawContent = typeof reply.content === "string" ? reply.content.trim() : "";
+  const mention = rawContent.match(/^@([A-Za-z0-9_]+)(?:\s+#\d+)?(?:\s+|$)/);
+  const content = mention ? rawContent.slice(mention[0].length).trim() : rawContent;
+
+  return {
+    id: index + 1,
+    author: reply.member?.username || "deleted",
+    content: content || "(deleted)",
+    replyTo: mention?.[1] ?? null,
   };
-  comments: RawComment[];
 }
 
-export async function scrapeV2EXPage(
-  postId: string,
-  page: number,
-  commentStartId: number = 1,
-): Promise<ScrapedPage> {
-  const baseUrl = `https://www.v2ex.com/t/${postId}`;
-  const url = page === 1 ? baseUrl : `${baseUrl}?p=${page}`;
-  const md = await fetchPage(url);
-  const comments = parseCommentsFromMarkdown(md, commentStartId);
-
-  if (page === 1) {
-    const parsed = parseMetaFromMarkdown(md);
-    const totalPages = Math.max(Math.ceil(parsed.replyCount / 100), 1);
-    return { meta: { ...parsed, totalPages }, comments };
-  }
-
-  return { comments };
-}
-
-/**
- * Scrape all pages of a V2EX post at once. Used by cron job.
- */
+/** Fetch a complete post through V2EX's public JSON API. */
 export async function scrapeV2EXPost(postId: string): Promise<RawPostData> {
-  const first = await scrapeV2EXPage(postId, 1);
-  const meta = first.meta!;
-  const allComments = [...first.comments];
+  const cacheBucket = Math.floor(Date.now() / 60_000);
+  const topicUrl = `${V2EX_ORIGIN}/api/topics/show.json?id=${postId}&v2ex_report_cache=${cacheBucket}`;
+  const repliesUrl = `${V2EX_ORIGIN}/api/replies/show.json?topic_id=${postId}&v2ex_report_cache=${cacheBucket}`;
 
-  for (let p = 2; p <= meta.totalPages; p++) {
-    try {
-      const page = await scrapeV2EXPage(postId, p, allComments.length + 1);
-      if (page.comments.length === 0) break;
-      allComments.push(...page.comments);
-    } catch {
-      break;
-    }
+  const [topics, replies, viewCount] = await Promise.all([
+    fetchJSON<V2EXTopic[]>(topicUrl),
+    fetchJSON<V2EXReply[]>(repliesUrl),
+    fetchViewCount(postId, cacheBucket),
+  ]);
+
+  const topic = topics[0];
+  if (!topic || topic.deleted || String(topic.id) !== postId || !topic.member) {
+    throw new Error("V2EX post was not found or has been deleted");
+  }
+  if (!Array.isArray(replies)) {
+    throw new Error("V2EX replies response is invalid");
+  }
+  if (topic.replies > MAX_REPLIES) {
+    throw new Error(`Posts with more than ${MAX_REPLIES} replies are not supported`);
+  }
+  if (
+    replies.length !== topic.replies ||
+    replies.some((reply) => reply.topic_id !== topic.id)
+  ) {
+    throw new Error("V2EX returned an incomplete reply list; the old report was kept");
   }
 
   return {
     postId,
-    title: meta.title,
-    author: meta.author,
-    url: `https://www.v2ex.com/t/${postId}`,
-    viewCount: meta.viewCount,
-    favoriteCount: meta.favoriteCount,
-    replyCount: meta.replyCount || allComments.length,
-    totalPages: meta.totalPages,
-    comments: allComments,
+    title: topic.title,
+    author: topic.member.username,
+    url: `${V2EX_ORIGIN}/t/${postId}`,
+    viewCount,
+    replyCount: replies.length,
+    totalPages: Math.max(1, Math.ceil(replies.length / 100)),
+    comments: replies.map(normalizeReply),
   };
 }

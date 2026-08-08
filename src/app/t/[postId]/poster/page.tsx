@@ -1,10 +1,16 @@
 import { notFound } from "next/navigation";
-import PosterPreview from "@/components/poster/PosterPreview";
+import LivePosterPreview from "@/components/poster/LivePosterPreview";
+import { staticPostIds } from "@/data/reports";
 import { getFAQData, getReportData } from "@/lib/data";
-import { buildPosterContent } from "@/lib/poster-content";
 
 interface PosterPageProps {
   params: Promise<{ postId: string }>;
+}
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return staticPostIds.map((postId) => ({ postId }));
 }
 
 export default async function PosterPage({ params }: PosterPageProps) {
@@ -23,6 +29,5 @@ export default async function PosterPage({ params }: PosterPageProps) {
     notFound();
   }
 
-  const content = buildPosterContent(report, faqs);
-  return <PosterPreview content={content} />;
+  return <LivePosterPreview report={report} faqs={faqs} postId={postId} />;
 }

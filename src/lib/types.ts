@@ -5,7 +5,6 @@ export interface V2EXReport {
     author: string
     url: string
     viewCount: number
-    favoriteCount: number
     replyCount: number
     lastFetched: string
     totalPages: number
@@ -19,7 +18,6 @@ export interface Comment {
   author: string
   content: string
   replyTo: string | null
-  likes: number
   isOP: boolean
   topics: string[]
   sentiment: "positive" | "neutral" | "negative"

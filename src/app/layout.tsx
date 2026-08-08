@@ -35,9 +35,10 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://v2ex-report.vercel.app";
+const siteUrl = "https://v2ex-chronicle.pages.dev";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "The V2EX Chronicle",
   description:
     "V2EX 热门帖子评论可视化分析报告，包含情感分析、话题分布、活跃用户排行与 AI 摘要",
